@@ -186,6 +186,17 @@ a.black{
     background: var(--black);
 }
 
+.picpadd{
+
+    padding: 60px;
+    max-height: 50vh;
+    border-radius: 20px;
+    box-shadow: 3px 3px 15px #dbdbdb;
+}
+.borderradius{
+    border-radius: 12px;
+}
+
 /* Marc */
 
 
