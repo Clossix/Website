@@ -1,0 +1,80 @@
+/*--------------
+DM6 SS 2022
+CSS STYLESHEET
+
+COPYRIGHT© TEAM3
+
+FELIX DEDEK
+RICHARD DUCHAN 
+MARC FISCHER
+ISABELLE KOPPENHÖFER
+KASIMIR POLIVKA
+
+LECTURE OVERVIEW CSS FILE 
+---------------*/
+.content {
+    height: 15rem
+}
+
+.h1_orange {
+    font-weight: 400;
+    color: #ea9d03;
+}
+
+.p_threequarter-length {
+    max-width: 80%;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+.wrapper-main .content:first-child {
+    padding-top: 0rem;
+}
+
+.wrapper-main main .lectures-overview-wrapper .lectures .lecture {
+    flex: 0 0 calc(100% / 3);
+}
+
+.wrapper-main main .lectures-overview-wrapper .lectures .lecture.swiper-slide-active .lecture-inner, .wrapper-main main .lectures-overview-wrapper .lectures .lecture.swiper-slide-active ~ .lecture .lecture-inner {
+    padding: 2.5rem 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+}
+.wrapper-main main .lectures-overview-wrapper .lectures .lecture.swiper-slide-active .lecture-inner {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.swiper-scrollbar-horizontal {
+    background: #ea9d03 !important;
+    height: 2px !important;
+    margin: 2rem!important;
+    width: 90% !important;
+    scroll-behavior: smooth !important;
+}
+
+.swiper-scrollbar-drag {
+    height: 40px !important;
+    width: 40px !important;
+    border-radius: 220px !important;
+    position: relative !important;
+    top: -18px !important;
+    background: white !important;
+    border: 3px solid #ea9d03 !important;
+}
+
+.lecture-inner {
+    justify-content: space-between;
+    height: 16rem !important;
+    width: 14rem !important;
+    padding: 1.5rem 0.75rem !important;
+}
+
+.lecture-image {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+}
+

@@ -1,0 +1,282 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/info.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('login')">
+                            LOGIN
+                        </div>
+                    </li>
+                    <li>
+                        <div class="signup-button" onclick="showPopup('signup')">
+                            REGISTRIEREN
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../index.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home"/></a>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr/>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Help" /></a>
+                    <a href="../html/about.html"><img src="../assets/icons/nav/icon-about-active.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <!-- <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> -->
+                <div class="boxshadow-wrapper">
+                    <div class="content">
+                            <h1>Impressum</h1><br/>
+
+                            <p>
+                                Technische Hochschule Ulm <br/>
+                                Hochschule für angewandte Wissenschaften <br/> 
+                                Prittwitzstrasse 10 <br/>
+                                89075 Ulm <br/>
+                            </p><br/>
+                            <h2>Vertreten durch:</h2><br/>
+                            <p> 
+                                Die Technische Hochschule Ulm ist eine Körperschaft des öffentlichen Rechts. 
+                                Sie wird durch den Rektor Prof. Dr. Volker Reuter gesetzlich vertreten.
+                            </p><br/>
+
+                            <h2>Kontakt:</h2><br/>
+                            <p> 
+                                Telefon: +49 (0731) 50-28323<br/>
+                                Telefax: +49 (0731) 50-28319<br/>
+                                E-Mail: dm@hs-ulm.de
+                            </p><br/>
+
+                            <h2>Umsatzsteuer-ID:</h2><br/>
+                            <p> 
+                                Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: DE-811 38 6002
+                            
+                            </p><br/>
+
+                            <h2>Aufsichtsbehörde:</h2><br/>
+                            <p> 
+                                Ministerium für wissenschaft, Forschung und Kunst Baden-Württemberg (MWK) Königstrasse 46 70173 Stuttgart<br/>
+                                https://mwk.badenwuerttemberg.de/
+                            </p><br/>
+                            
+                            <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</h2><br/>
+                            <p> 
+                                Prof. Dr. Volker Reuter, Rektor der Hochschule Ulm
+                            </p><br/>
+
+                            <h2>Fragen zur Homepage:</h2><br/>
+                            <p> 
+                                Für inhaltliche Fehlermeldungen, Aktualisierungen oder Ergänzungswünsche kontaktieren Sie bitte das Online-Redaktionsteam unter: dm@hs-ulm.de<br/>
+                                Für technische Fehlermeldungen und Erweiterungswünsche wenden Sie sich bitte an unser Webteam unter: dm@hs-ulm.de
+                            </p><br/>
+
+                            <h2>Quellenangaben für die verwendeten Bilder und Grafiken:</h2><br/>
+                            <p> 
+                                Jochen Herrmann/Hochschule Ulm, Laurens Braig/Hochschule Ulm.<br/>
+                                Bei studentischen Projekten wird der Name direkt auf der Seite angegeben. Bei Einzelprojekten unter "Realisierung" und bei Teamarbeiten unter "Team".
+                            </p><br/>
+
+                            <h2>Weibliche und männliche Schreibweise:</h2><br/>
+                            <p> 
+                                Die Hochschule Ulm bemüht sich sowohl die weibliche als auch die männliche Schreibweise zu verwenden. 
+                                Aus Gründen der besseren Lesbarkeit wird teilweise jedoch nur die männliche Schreibweise verwendet. 
+                                Wir weisen hier ausdrücklich darauf hin, dass bei den entsprechenden Beiträgen die männliche Form sich immer zugleich auf weibliche und männliche Personen bezieht.
+                            </p><br/>
+
+                            <h2>Haftungsausschluss</h2><br/>
+                            <p> 
+                                Haftung für Inhalte: Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. 
+                                Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. 
+                                Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. 
+                                Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. 
+                                Bei Bekanntwerden von entsprechenden Rechtsverletzungen werden wir diese Inhalte umgehend entfernen.
+                            </p><br/>
+
+                            <h2>Haftung für Links:</h2><br/>
+                            <p> 
+                                Unser Angebot enthält Links zu externen Webseiten Dritter, auf deren Inhalte wir keinen Einfluss haben. 
+                                Deshalb können wir für diese fremden Inhalte auch keine Gewähr übernehmen. 
+                                Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. 
+                                Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. 
+                                Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. 
+                                Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. 
+                                Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Links umgehend entfernen.
+                            </p><br/>
+
+                            <h2>Urheberrecht:</h2><br/>
+                            <p> 
+                                Die durch die Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. 
+                                Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers. 
+                                Downloads und Kopien dieser Seite sind nur für den privaten, nicht kommerziellen Gebrauch gestattet. 
+                                Soweit die Inhalte auf dieser Seite nicht vom Betreiber erstellt wurden, werden die Urheberrechte Dritter beachtet. 
+                                Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitten wir um einen entsprechenden Hinweis. 
+                                Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
+                            </p><br/>
+
+                            <h2>Social Media</h2><br/>
+                            <p> 
+                                Hinweis zur Nutzung von Social Media: Die Hochschule Ulm nutzt die Kommunikationsmöglichkeiten, die Soziale Medien bieten. 
+                                Sie macht jedoch darauf aufmerksam, dass bereits durch das Anklicken von Links zu diesen Diensten eine Übermittlung personenbezogener Daten erfolgen kann. 
+                                Dies ist unabhängig davon, ob Sie selbst Mitglied des sozialen Netzwerks sind oder nicht. Diese Daten könnten technisch zum Aufbau eines personenbezogenen Profils genutzt werden. 
+                                Mit dem Anklicken dieser Links verlassen Sie den von der Hochschule Ulm kontrollierten und verantworteten Bereich. Beachten Sie auf jeden Fall die Datenschutzregelungen und -einstellungen der Anbieter.<br/>
+                            
+                                Die Inhalte der Social Media Kanäle werden mit größtmöglicher Sorgfalt recherchiert und erstellt. 
+                                Eine Gewähr für die Richtigkeit, Vollständigkeit, Aktualität und Qualität der bereitgestellten Inhalte kann trotz sorgfältiger Prüfung nicht übernommen werden. 
+                                Hinweise und Korrekturen senden Sie bitte an socialmedia@hs-ulm.de.<br/>
+                            
+                                Namentlich gekennzeichnete Beiträge geben die Meinung des jeweiligen Autors und nicht die Meinung der Hochschule Ulm wieder. 
+                                Die Hochschule Ulm ist nicht verantwortlich für Kommentare und Posts Dritter.
+                            </p><br/>
+
+                            <h2>Netikette</h2><br/>
+                            <p> 
+                                Wir freuen uns, wenn Sie Kommentare, Fotos, Videos und Links auf unseren Social Media Kanälen posten. 
+                                Wir haben den Anspruch, dass die Diskussionen zu den Inhalten für alle Leser interessante und relevante Erkenntnisse liefern. 
+                                Damit alle Besucher dieser Seiten Freude daran haben, bitten wir Sie folgende Spielregeln zu beachten: Zur Netikette.
+                            </p><br/>
+
+                            <h2>Tracking</h2><br/>
+                            <p> 
+                                ie Hochschule Ulm verwendet keine Trackingdienste wie Facebook Pixel, Google Analytics etc. 
+                                Bitte beachten Sie aber, dass die Verarbeitung, Speicherung, Löschung und Nutzung personenbezogener Daten in den sozialen Netwerken dem jeweiligen Dienstanbieter obliegt und die Hochschule Ulm darauf keinen Einfluss hat.
+                            </p><br/>    
+                        </div>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+        <!-- Overlay Popup -->
+        <div class="popup-outer-wrapper" style="display:none">
+            <div class="popup-inner-wrapper login">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">    
+                    <h1 class="popup-header login">JETZT ANMELDEN</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar avatar-before">
+                                <img src="../assets/icons/icon-user-circle.svg" alt="Lectures" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                 LVL 0
+                                </span>
+                                <div class="exp-bar">
+                                  <ins style="width:0%"></ins>
+                                </div>
+                                0 / 2000 XP
+                              </div>
+                        </div>
+                        <div class="popup-item form-container">
+                            <form action="../html/index_login.html">
+                                <div class="form-item">
+                                    <label for="loginMail">Username / E-Mail</label>
+                                    <input type="email" placeholder="MuellerStudent98" id="loginMail">
+                                </div>
+                                <div class="form-item">
+                                    <label for="loginPass">Passwort</label>
+                                    <input type="password" placeholder="**********" id="loginPass">
+                                </div>
+                                <div>
+                                    <input type="submit" class="btn" value="Login">
+                                </div>
+                                <div class="not-sign">
+                                    Kein Account? 
+                                    <span class="link-text" onclick="closePopup();showPopup('signup')">Hier Registrieren</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-inner-wrapper signup" style="display:none;">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">    
+                    <h1 class="popup-header signup">JETZT REGISTRIEREN</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar avatar-before">
+                                <img src="../assets/icons/icon-user-circle.svg" alt="Lectures" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                 LVL 0
+                                </span>
+                                <div class="exp-bar">
+                                  <ins style="width:0%"></ins>
+                                </div>
+                                0 / 2000 XP
+                              </div>
+                        </div>
+                        <div class="popup-item login-container">
+                            <form action="../html/index_login.html">
+                                <div class="form-item">
+                                    <label for="signupSurname">Vorname</label>
+                                    <input type="text" placeholder="Vorname" id="signupSurname">
+                                </div>
+                                <div class="form-item">
+                                    <label for="signupName">Nachname</label>
+                                    <input type="text" placeholder="Nachname" id="signupName">
+                                </div>
+                                <div class="form-item">
+                                    <label for="signupMail">Username / E-Mail</label>
+                                    <input type="email" placeholder="Email" id="signupMail">
+                                </div>
+                                <div class="form-item">
+                                    <label for="signupPass">Passwort</label>
+                                    <input type="password" placeholder="Password" id="signupPass">
+                                </div>
+                                <div>
+                                    <input type="submit" class="btn" value="Registrieren">
+                                </div>
+                                <div class="not-sign">
+                                    Schon registriert? 
+                                    <span class="link-text" onclick="closePopup();showPopup('login')">Hier Einloggen</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedout.js"></script>
+        </div>
+    </body>
+</html>

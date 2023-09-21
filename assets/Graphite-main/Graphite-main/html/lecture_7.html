@@ -1,0 +1,350 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/lecture.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand mit aktueller Lektionsnummer überschreiben, beachtet die geänderte Nummerierung!
+                    var lectureProgress = localStorage.setItem("lectureProgress", "7");
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <div class="lecture-nav"> <!-- Button-Navigation oben rechts -->
+                                <button class="lecture-button previous-lecture" id="backButton" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                                <a href="../html/lectures_overview.html" class="lecture-button close-lecture" style="background: url(../assets/icons/icon-cancel.svg);"></a>
+                            </div><!---->
+                            <h1>Texturen</h1><br/>
+                            <div class="audio-menu"> <!-- Start Audio-Player -->
+                                <button class="audio-button start-audio" id="startAudioButton" onclick="playAudio()">
+                                    <img id="playAudioImg" src="../assets/icons/icon-play.svg"><img>
+                                    <p id="playAudioTxt">Audio aktivieren</p>
+                                    <audio id="audio1" src="../assets/audio/7-texturen/lecture_7_1.mp3"></audio> <!-- Sprechertext Teil 1 -->
+                                </button>
+                                <button class="audio-button pause-audio" id="pauseAudioButton" onclick="pauseAudio()">
+                                    <img id="pauseAudioImg" src="../assets/icons/icon-pause.svg"><img>
+                                    <p id="pauseAudioTxt">Audio pausieren</p>
+                                </button>
+                            </div><!-- Ende Audio-Player -->
+                            <br>
+                            <p>
+                                Wenn Du in deinen Bildern zeigen willst, aus welchen Materialien deine Objekte bestehen, musst Du ihnen Texturen geben. 
+                            </p>
+                            <br>
+                            <p>
+                                Was also ist Textur in der Kunst? Textur ist die Art und Weise, wie sich etwas anfühlt oder aussieht, als ob es sich anfühlen könnte, wenn man es berührt. Für viele impliziert das Wort Textur Rauheit, aber Textur sollte sich auf jede taktile Qualität beziehen: glatt, rau, glänzend, flauschig, uneben, weich, usw.  
+                            </p>
+                            <br>
+                            <p>
+                                Schließe doch einmal die Augen und ertaste die Objekte um Dich herum. Wie würdest Du ihre Textur beschreiben?
+                            </p>
+                            <br>
+                            <h3>Arten von Textur</h3>
+                            <p>
+                                In der Kunst unterscheidet man meist zwischen der <b>tatsächlichen</b> und der <b>implizierten Textur</b>.  
+                            </p>
+                            <br>
+                            <p>
+                                <b>Tatsächliche Textur</b> ist berührbar. Sie ist real. Denke an eine Collage, in der verschiedene Materialien verwendet werden. Eine tatsächliche Textur lässt sich auf dem Bildschirm gar nicht darstellen, weil sie stets fühlbar sein muss.  
+                            </p>
+                            <br>
+                            <p>
+                                <b>Implizierte Textur</b> ist die Illusion einer strukturierten Oberfläche, die durch Tonwertveränderungen mit Hilfe von Mustern entsteht. Zeichnest Du eine Textur in dein Bild, so ist diese also (fast) immer impliziert.
+                            </p>
+                            <br>
+                            <p>
+                                Eine sehr wichtige Rolle spielt auch die Art der Oberfläche. Denn sie bestimmt, zusammen mit der Stärke der Struktur, die Lichtmenge, die von der Oberfläche reflektiert wird.  
+                            </p>
+                            <br>
+                            <h4>Harte Oberflächen</h4>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/7-texturen/7_1.jpeg" alt="Metall" style = "width:45%"/>
+                                <p class="subline">
+                                    Oberfläche aus Metall
+                                </p>
+                            </div><!---->
+                            <ul>
+                                <li>z. B. Metall, Glas</li>
+                                <li>stark reflektierend (Licht prallt mehr von der Oberfläche ab und wird stärker zurückgeworfen)</li>
+                                <li>scharfe, klare Kanten</li>
+                                <li>stärkere Kontraste zwischen hellen und dunklen Werten</li>
+                            </ul>
+                            <br>
+                            <h4>Weiche Oberflächen</h4>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/7-texturen/7_2.jpg" alt="Stoff" style = "width:45%"/>
+                                <p class="subline">
+                                    Oberfläche aus Stoff
+                                </p>
+                            </div><!---->
+                            <ul>
+                                <li>z. B. Stoff oder Blätter</li>
+                                <li>absorbiert das Licht</li>
+                                <li>weiche Übergänge zwischen Lichtern und Schatten</li>
+                            </ul>
+                            <br>
+                            <h4>Raue Oberflächen</h4>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/7-texturen/7_3.jpg" alt="Rinde" style = "width:45%"/>
+                                <p class="subline">
+                                    Oberfläche aus Baumrinde
+                                </p>
+                            </div><!---->
+                            <ul>
+                                <li>z. B. Baumrinde</li>
+                                <li>je tiefer die Vertiefungen oder Spalten sind, desto rauer ist die Textur</li>
+                                <li>stärkere Tonwertunterschiede (durch viele kleine Erhebungen, die das Licht auf dem Höhepunkt einfangen und einen dunklen Schatten hinter der Erhebung hinterlassen)</li>
+                            </ul>
+                            <br>
+                            <h3>Textur in der Zeichnung</h3>
+                            <p>
+                                Wenn wir unserer Kugel aus der Lektion <b>Licht und Schatten 1</b> nun unterschiedliche Texturen geben wollen, so müssen wir die Art der Schraffur und die Qualität der Kanten (Härte/Weichheit einer Kontur) verändern.
+                            </p>
+                            <br>
+                            <p>
+                                Du solltest das Zeichnen von Texturen aber als Feinschliff verstehen, denn die Textur ist allen anderen Elementen (Form, Gestalt, Helligkeit, Farbe, Linie) untergeordnet.
+                            </p>
+                            <ul>
+                                <li>erst Form und Gestalt (3-Dimensionalität)</li>
+                                <li>dann Textur</li>
+                            </ul>
+                            <br>
+                            <p>Schauen wir uns jetzt folgende fünf Versionen unserer Kugel an:</p>
+                            <br>
+                            <div class="lectures lecture-image-div">
+                                <img class="lecture-image" src="../assets/pictures/lectures/7-texturen/7_4.png" alt="kontrastarm - kontrastreich"/>
+                                <p class="subline"></p>
+                            </div>
+                            <br>
+                            <p>
+                                Sie alle scheinen eine andere Textur zu haben. Woran liegt das? Lass uns dafür einmal versuchen, die Kugeln in vier Kategorien zur Materialbeschaffenheit einzuordnen. Dabei erklären wir auch gleich, was uns zu dieser Einteilung verleitet. 
+                            </p>
+                            <br>
+                            <p>
+                                Hart:
+                            </p>
+                            <ul>
+                                <li>Die Kugeln 1, 2 und 5 fühlen sich <b>hart</b> an, weil ihre <b>Kanten scharf</b> sind.</li>
+                            </ul>
+                            <br>
+                            <p>
+                                Weich:
+                            </p>
+                            <ul>
+                                <li>Kugel 3 fühlt sich wiederum <b>weich</b> an, was an der <b>lockeren Kantenqualität</b> liegt.</li>
+                                <li>Kugel 4 fühlt sich <b>weich</b> an, weil ihre Kante unregelmäßig und <b>mit losen Spuren</b> versehen ist.</li>
+                            </ul>
+                            <br>
+                            <p>
+                                Glatt:
+                            </p>
+                            <ul>
+                                <li>Die Kugeln 1, 2 und 4 erscheinen <b>glatt</b>, weil nur <b>wenige Stellen des Papiers</b> durch die Bleistiftstriche <b>sichtbar</b> sind.</li>
+                                <li>Die <b>scharfen Formen und Glanzpunkte</b> in der Form von Kugel 2 erwecken hier den Eindruck einer <b>spiegelnden Oberfläche.</b></li>
+                            </ul>
+                            <br>
+                            <p>
+                                Rau:
+                            </p>
+                            <ul>
+                                <li>Die Kugeln 3 und 5 sind offensichtlich <b>gröber strukturiert</b> als 1, 2 und 4.</li>
+                                <li>Kugel 3 besteht aus Linien, während Kugel 5 mit kleinen dunklen Formen gezeichnet ist.</li>
+                                <li>Den Eindruck von Textur erzeugt hier besonders stark eine Mischung aus Hell und Dunkel.</li>
+                            </ul>
+                            <br>
+                            <h3>Wie du Texturen zeichnen üben kannst</h3>
+                            <p>Eine gute Möglichkeit, das Simulieren von Texturen zu üben, besteht darin, zunächst einen Abdruck einer strukturierten Oberfläche zu machen und dann zu versuchen, diesen Abdruck freihändig zu kopieren.</p>
+                            <br>
+                            <div class="lectures lecture-image-div">
+                                <img class="lecture-image" src="../assets/pictures/lectures/7-texturen/7_5.png" alt="Schraffuren"/>
+                                <p class="subline"></p>
+                            </div>
+                            <br>
+                            <p>Für eine solche Abreibung benötigst Du:</p>
+                            <ul>
+                                <li>ein dünnes Blatt Papier (z. B. Kopierpapier),</li>
+                                <li>ein weiches Zeichenmedium (z. B. Holzkohle oder einen weichen Bleistift) und</li>
+                                <li>eine raue Oberfläche (z.B. Ziegelsteine, ein Korb oder Baumrinde).</li>
+                            </ul>
+                            <br>
+                            <p>Jetzt kann es losgehen!</p>
+                            <ol>
+                                <li>Lege Dein Papier auf die strukturierte Oberfläche. Du kannst es auch mit Klebeband befestigen.</li>
+                                <li>Streiche mit der Seite Deines Zeichenwerkzeugs von Seite zu Seite über Dein Papier. 
+                                    Achte darauf, dass die Striche zusammen bleiben und keine Lücken entstehen.</li>
+                                <li>Beginne mit leichtem Druck. Wenn die Musterungen nicht deutlich genug sind, erhöhe den Druck allmählich, bis die Textur zu erscheinen beginnt. Ein zu starker Druck kann die Textur, die Du einfangen willst, sogar verdecken.</li>
+                            </ol>
+                            <br>
+                            <p>Wenn Du einige Texturen mit der Reibetechnik erfasst hast, versuche, die Spuren so genau wie möglich auf einem separaten Blatt Papier nachzubilden.</p>
+                            <br>
+                            <h3 style="color: #ea9d03;">Aufgabe</h3>
+                            <audio id="audio2" src="../assets/audio/7-texturen/lecture_7_2.mp3"></audio> <!-- Sprechertext Teil 2 -->
+                            <p id="startAudio2">
+                                Diese Übung wird Dir helfen, sowohl das Fingerspitzengefühl als auch die Geduld zu entwickeln, um eine implizierte Textur zu erzeugen. 
+                            </p>
+                            <p>
+                                Teile Deine Ergebnisse davon doch einmal im Communityhub und schau, ob andere das richtige Material erraten können!
+                            </p>
+                            <br>
+                            <h3>Schlusswort</h3>
+                            <p>Glückwunsch, du hast es durch die Lektion geschafft! Mit den hier gelernten Techniken, kannst du deinen Zeichnungen den letzten Schliff verpassen. Hast du schon Lust bekommen, dich auf die Suche nach spannenden Oberflächen zu begeben und dir ein eigenes Sortiment an Texturen anzulegen?</p>
+                            <div id="end-popup-outer"> <!-- Start PopUp Meine Posts/Nächste Lektion -->
+                                <div id="end-popup-inner">
+                                    <p id="popUpTxt">Gut gemacht! Teile noch heute deine Zeichnung mit der Community. Feedback ist wichtig für deinen Lernerfolg. Trau dich!</p>
+                                    <div id="buttonContainerLectureEnd">
+                                        <input type="button" class="btn" id="toMyPosts" value="Zu meinen Posts" onclick="window.location.href = '../html/community-mydrawings.html';"/>
+                                        <input type="button" class="btn" id="nextLecture" value="Zur nächsten Lektion"/>
+                                    </div>
+                                </div>
+                            </div> <!-- Ende PopUp Meine Posts/Nächste Lektion -->
+                            <div class="lection-end">
+                                <input type="button" class="btn" id="nextLecturePopUp" value="Zur nächsten Lektion" />
+                            </div>
+                        </div>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+    <!-- Overlay Sound Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();checkAudio();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

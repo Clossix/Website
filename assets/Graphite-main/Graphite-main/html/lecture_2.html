@@ -1,0 +1,299 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/lecture.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand mit aktueller Lektionsnummer überschreiben, beachtet die geänderte Nummerierung!
+                    var lectureProgress = localStorage.setItem("lectureProgress", "2");
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <div class="lecture-nav"> <!-- Button-Navigation oben rechts -->
+                                <button class="lecture-button previous-lecture" id="backButton" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                                <a href="../html/lectures_overview.html" class="lecture-button close-lecture" style="background: url(../assets/icons/icon-cancel.svg);"></a>
+                            </div><!---->
+                            <h1>Zeichenmaterialien</h1><br/>
+                            <div class="audio-menu"> <!-- Start Audio-Player -->
+                                <button class="audio-button start-audio" id="startAudioButton" onclick="playAudio()">
+                                    <img id="playAudioImg" src="../assets/icons/icon-play.svg"><img>
+                                    <p id="playAudioTxt">Audio aktivieren</p>
+                                    <audio id="audio1" src="../assets/audio/2-zeichenmaterialien/lecture_2_1.mp3"></audio> <!-- Sprechertext Teil 1 -->
+                                </button>
+                                <button class="audio-button pause-audio" id="pauseAudioButton" onclick="pauseAudio()">
+                                    <img id="pauseAudioImg" src="../assets/icons/icon-pause.svg"><img>
+                                    <p id="pauseAudioTxt">Audio pausieren</p>
+                                </button>
+                            </div><!-- Ende Audio-Player -->
+                            <br>
+                            <p>
+                                In dieser Lektion gehen wir die verschiedenen Zeichenmaterialien durch, 
+                                die man fürs Zeichnen benötigt oder einfach mal ausprobieren kann.
+                                Viele Materialien können dir das Zeichnen erleichtern oder dir helfen einen einfachen 
+                                einstieg zu erlangen und bessere Ergebnisse zu erbringen. <br> Trotz allem macht dich das beste 
+                                Material nicht gleich zu einem guten Zeichner/in. Du brauchst also nicht alle der hier empfohlenen 
+                                Materialien um die folgenden Lektionen zu bearbeiten, es ist immer hilfreich für den Anfang mit dem altbekannten material zu arbeiten.
+                            </p>
+                            <br>
+                            
+                            
+                            <br/>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/2-zeichenmaterialien/2_1.jpg" alt="Kugel"/>
+                                <p class="subline">
+                                    Zeichenmaterialien
+                                </p>
+                            </div><!---->
+                            <br/>
+                            <p>Im ersten Teil wollen wir die Bleistifte durchgehen. Die Marke ist eher irrelevant der Bleistift an sich und seine Mine sind das Interessante. 
+                                Es gibt verschiedene Bleistift stärken welche in die Kategorien H, HB, B eingeteilt sind.
+                            </p> 
+                            <ul>
+                                <li>H: Härtere Bleistifte mit hellerer Linie (gut für kleine genaue Zeichnungen)</li>
+                                <li>B: Weichere Bleistifte mit dunklerer Linie (gut für Strukturen/Flächen/Schatten)</li>
+                            </ul>   
+                             <p>   
+                                Wir empfehlen euch als Anfänger mit den leichten B Bleistiftstufen zu beginnen. Dies währen Stufen von HB - 4B.
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/2-zeichenmaterialien/2_2.jpg" alt="Kugel"/>
+                                <p class="subline">
+                                    Bleistifte
+                                </p>
+                            </div><!---->
+                            <br/>
+                            <p>Das Gegenstück zum Bleistift ist der Radiergummi. von diesem gibt es viele Verschiedene Arten und Formen, 
+                                wir wollen uns die grundlegenden mal anschauen.
+                            </p> 
+                            <ul>
+                                <li>Harter Radiergummi: Gut für Kleinflächige arbeiten/evtl. Reizung des Papier Materials</li>
+                                <li>Weicher Radiergummi: Gut für Großflächige Arbeiten/Schnelles Abreiben</li> 
+                                <li>Radierstift: Gut für Minimale, Kleinflächige Arbeiten/gut zum High-Lights setzen</li>
+                                <li>Knetradiergummi: Gut für Kohle und Pastell/sehr Papier Material schonend</li>
+                            </ul>   
+                             <p>   
+                                Tipp: Beim Arbeiten mit weichen und harten Radiergummis empfiehlt es sich diese nach 
+                                der Zeit auf einem extra Papier sauber zu reiben damit sich das Zeichenmaterial aus den Poren wieder löst.
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/2-zeichenmaterialien/2_3.jpg" alt="Kugel"/>
+                                <p class="subline">
+                                    Radiergummi
+                                </p>
+                            </div><!---->
+                            <br/>
+                            <p>Zeichenpapiere bei einem höheren Gewicht auch Zeichenkarton genannt sind wie der Name sagen zum 
+                                Zeichnen und Skizzieren geeignet. Die Typischen Zeichenpapiere sind für den Anfang ungeeignet 
+                                da sie eine größere Radierer und wisch Festigkeit besitzen, und sind somit nur für den Fortgeschritten Zeichner die Wahl. 
+                                Ansonsten ist das beispielsweise Standartdrucker Papier eine gute Wahl. Zu den weiteren Zeichen Materialien wie Kohle, 
+                                Marker, … gibt es andere Papierarten welche wir aber im nächsten Abschnitt ansprechen werden.
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/2-zeichenmaterialien/2_5.jpg" alt="Kugel"/>
+                                <p class="subline">
+                                    Zeichenpapier
+                                </p>
+                            </div><!---->
+                            <br/>
+                            <p>Andere Zeichen Materialien wie schon angesprochen sind 
+                                <a href="https://www.schnaud.de/2020/01/19/kohlestift/" target="_blank" rel="noopener noreferrer">Kohle</a>, 
+                                <a href="https://zeichnen-lernen.net/bilder-kolorieren-ausmalen/kolorieren-mit-markern-828.html" target="_blank" rel="noopener noreferrer">Marker</a>,
+                                <a href="https://akademieruhr.de/fortbildungen/stories-inspiration/story/der-fineliner-als-gnadenlos-ehrliches-zeichenwerkzeug" target="_blank" rel="noopener noreferrer">Buntstift</a>,
+                                <a href="https://akademieruhr.de/fortbildungen/stories-inspiration/story/der-fineliner-als-gnadenlos-ehrliches-zeichenwerkzeug" target="_blank" rel="noopener noreferrer">Feinliner</a>
+                                
+                                und mehr. Für Kohle ist Beispielsweise auch ein Kohlepapier  notwendig welches die Kohle auf dem Papier gut halten kann. 
+                                Marker, wie zum Beispiel die der Marke Copic brauchen ein sehr dünnes und nicht Aufnahme Starkes Papier um an 
+                                Marker Flüssigkeit zu sparen. Mit den normalen Holzmalstiften kann auch auf normalen Papier 
+                                der Zeichnung eine Farbe verliehen werden. Die dunklen Fineliner werden meist verwendet um die 
+                                Kanten der Zeichnung nach zu zeichnen und ihnen eine bessere Plastizität zu liefern.
+                            </p>
+                            <br>
+                            <p>Als letzter Teil unsere Lektion gehen wir auf das Digitale Zeichen ein. 
+                                Es ist möglich mit einem Zeichen Programm auf einem Zeichen Tablet oder normalem Tablet zu zeichnen. 
+                                Dies braucht allerdings ein bisschen Übung. 
+                                Durch die Zeichen Programme und die integrierten Pinsel ist es möglich Bleistift Strukturen und Farben zu imitieren. 
+                                Dadurch ist das Medium zwa ein anderes die Zeichen Methodik bleibt aber die gleiche. 
+                                Falls du ein Tablet besitzt kanns du gerne versuchen auf diesem unsere Lektionen zu bearbeiten.
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/2-zeichenmaterialien/2_4.jpg" alt="Kugel"/>
+                                <p class="subline">
+                                    Zeichentablet
+                                </p>
+                            </div><!---->
+                            <br/>
+                            <p>Funfact: Unsere Beispiel Zeichnungen sind alle ebenfalls auf einem Tablet/Zeichen Tablet gezeichnet worden.</p><br>
+                            <audio id="audio2" src="../assets/audio/2-zeichenmaterialien/lecture_2_2.mp3"></audio> <!-- Sprechertext Teil 2 -->
+                            <p id="startAudio2">
+                                Wie du siehst gibt es viele Medien und Materialien zum Zeichnen. 
+                                Es kann sehr inspirierend und helfend sein, jede form des Zeichnens mal auszuprobieren, 
+                                letztendlich muss aber jeder selbst sein Lieblings Material finden und herausfinden welches einem am besten liegt.
+                            </p>
+                            <br>
+                            
+                            <br>
+                            <div id="end-popup-outer"> <!-- Start PopUp Meine Posts/Nächste Lektion -->
+                                <div id="end-popup-inner">
+                                    <p id="popUpTxt">Gut gemacht! Teile noch heute deine Zeichnung mit der Community. Feedback ist wichtig für deinen Lernerfolg. Trau dich!</p>
+                                    <div id="buttonContainerLectureEnd">
+                                        <input type="button" class="btn" id="toMyPosts" value="Zu meinen Posts" onclick="window.location.href = '../html/community-mydrawings.html';"/>
+                                        <input type="button" class="btn" id="nextLecture" value="Zur nächsten Lektion"/>
+                                    </div>
+                                </div>
+                            </div> <!-- Ende PopUp Meine Posts/Nächste Lektion -->
+                            <div class="lection-end"><!-- Button zum Öffnen des Pops -->
+                                <input type="button" class="btn" id="nextLecturePopUp" value="Zur nächsten Lektion" />
+                            </div><!---->
+                        </div>
+                </div>
+            </main>
+            <footer class="lecture-footer"></footer>
+        </div>
+        <!-- Overlay Sound Popup -->
+        <div class="popup-outer-wrapper" style="display:none">
+            <div class="popup-inner-wrapper profile">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">
+                    <h1 class="popup-header profile">MEIN PROFIL</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar">
+                                <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                    LVL X
+                                </span>
+                                <div class="exp-bar">
+                                    <ins style="width:75%"></ins>
+                                </div>
+                                <span class="cur-exp">X / 2000 </span> XP
+                            </div>
+                            <div class="userinfo">
+                                <div class="userinfo-item">
+                                    <span class="user user-name">
+                                        Name
+                                    </span>
+                                    <span class="user user-name-info">
+                                        Daniel Müller
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-id">
+                                        ID
+                                    </span>
+                                    <span class="user user-id-info">
+                                        MuellerStudent98
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-age">
+                                        Alter
+                                    </span>
+                                    <span class="user user-age-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupation">
+                                        Tätigkeit
+                                    </span>
+                                    <span class="user user-occupation-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupationAct">
+                                        Fachrichtung
+                                    </span>
+                                    <span class="user user-occupationAct-info">
+                                        -
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-item form-container">
+                            <form>
+                                <div>
+                                    <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="soundSwitch();checkAudio();" id="btnsettings">
+                                </div>
+                                <div class="not-sign">
+                                    Nicht dein Account?
+                                    <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="../scripts/loggedin.js"></script>
+            </div>
+        </div>
+    </body>
+</html>

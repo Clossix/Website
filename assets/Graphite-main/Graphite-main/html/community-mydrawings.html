@@ -1,0 +1,187 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graphite</title>
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="../data/manifest.json" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/community.css" />
+
+    <!-- SCRIPT -->
+    <script src="../scripts/pleaserotate.js"></script>
+    <script src="../scripts/home.js" defer></script>
+    <script src="../scripts/user.js" type="module" defer></script>
+    <script src="../scripts/community-mydrawings.js" defer></script>
+    <script src="../scripts/community.js" defer></script>
+
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- iOS Support -->
+    <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+</head>
+
+<body class="home" onload="getPostData()">
+    <header>
+        <div class="icon-main">
+            <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+        </div>
+        <nav class="nav-top">
+            <ul>
+                <li>
+                    <div class="login-button" onclick="showPopup('profile')">
+                        <img src="../assets/pictures/dummy-avatar.jpg" alt="Home" />
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+    </header>
+    <div class="wrapper-main">
+        <aside>
+            <nav class="nav-main">
+                <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                <a href="../html/community.html"><img src="../assets/icons/nav/icon-community-active.svg" alt="Community" /></a>
+                <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                <hr />
+                <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+            </nav>
+        </aside>
+        <main>
+            <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+            <div class="boxshadow-wrapper">
+                <div class="content">
+                    <h1>Deine Zeichnungen</h1>
+                    <div class="community-buttons">
+                        <div class="new-post-button">
+                            <div onClick="openNewPost()" class="new-post-button-inner">
+                                <p>Jetzt deine Zeichnung teilen!</p>
+                                <img src="../assets/icons/nav/icon-challenge.svg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content">
+                    <div class="community-post-container">
+                        <!--Placeholder-->
+                        <div id="post-dummy" class="community-post-dummy" onClick="openNewPost()">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Du hast noch keinen Posts</h2>
+                                </div>
+                                <p class="post-text">Trau dich. Unsere Community ist freundlich und hilfsbereit.</p>
+                                <p class="post-text">- Klicke hier, um ein Post hinzuzufügen -</p>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/_placeholder_2.png">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/lecture.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand mit aktueller Lektionsnummer überschreiben, beachtet die geänderte Nummerierung!
+                    var lectureProgress = localStorage.setItem("lectureProgress", "9");
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <div class="lecture-nav"> <!-- Button-Navigation oben rechts -->
+                                <button class="lecture-button previous-lecture" id="backButton" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                                <a href="../html/lectures_overview.html" class="lecture-button close-lecture" style="background: url(../assets/icons/icon-cancel.svg);"></a>
+                            </div><!---->
+                            <h1>Licht und Schatten 2</h1><br/>
+                            <div class="audio-menu"> <!-- Start Audio-Player -->
+                                <button class="audio-button start-audio" id="startAudioButton" onclick="playAudio()">
+                                    <img id="playAudioImg" src="../assets/icons/icon-play.svg"><img>
+                                    <p id="playAudioTxt">Audio aktivieren</p>
+                                    <audio id="audio1" src="../assets/audio/9-licht-schatten_2/lecture_9_1.mp3"></audio> <!-- Sprechertext Teil 1 -->
+                                </button>
+                                <button class="audio-button pause-audio" id="pauseAudioButton" onclick="pauseAudio()">
+                                    <img id="pauseAudioImg" src="../assets/icons/icon-pause.svg"><img>
+                                    <p id="pauseAudioTxt">Audio pausieren</p>
+                                </button>
+                            </div><!-- Ende Audio-Player -->
+                            <br>
+                            <p>
+                                Du kennst bereits die Grundlagen von Licht und Schatten und hast inzwischen auch Wissen über diverse Texturen und die Ein-Punkt-Perspektive erlangt,
+
+                                Du weißt wie man simple Referenzobjekte schattiert, wenn diese nur eine Lichtquelle besitzen.
+                                
+                                Wie verhält sich jedoch der Schatten, wenn zwei oder mehr Lichtquellen das Objekt bestrahlen?
+                            </p>
+                            <br>
+                            <h4>Bereits bekannte Schattierungsarten</h4>
+                            <ul>
+                                <li>Schraffur</li>
+                                <li>Wischen</li>
+                                <li>Schummern</li>
+                            </ul>
+                            <br>
+                            <h4>Neu: Negatives Schattieren</h4>
+                            
+                            <p>Bei dieser Technik wird nicht vom Hellen ins Dunkle gearbeitet, sondern von der Dunkelheit in die hellen Töne. Das bedeutet, dass Highlights erst später hinzugefügt werden, in dem mit einem Radiergummi gearbeitet wird. Durch sanfte radieren sind auch Halbtöne möglich.
+
+                                Diese Technik ist üblich bei weichen Zeichenmaterialien, wie z.B. :</p>
+                                <ul>
+                                    <li>Weicher Bleistift</li>
+                                    <li>Kohle</li>
+                                    <li>Ölgemälde (z.B. Rembrandt)</li>
+                                </ul>
+                                <br>
+                                <h4>Lichtverhalten</h4>
+                                
+                                <p>Direktes, gerichtetes, hartes Licht ist meist künstliches Licht z.B. von hellen LEDs oder starke Mittagssonne. Es werden harte und dunkle Schatten erzeugt.
+                                    Indirektes, diffuses, weiches Licht hat meistens eine natürliche Lichtquelle und variiert je nach Tageszeit und Wetter. Dieses Licht erzeugt weiche und helle Schatten.
+                                </p>
+                                <br>
+                                <h4>Beleuchtungsstile</h4>
+                                
+                                <p>Durch das obige gelernte Lichtverhalten kannst du dir dein Motiv und deine Beleuchtungssituation selbst bestimmen und aufbauen. 
+                                    Je nachdem für wieviel Licht du dich entscheidest, wählst du deinen anderen Stil und bestimmst damit auch die Stimmung deiner Zeichnung.</p>
+                                    <ul>
+                                        <li>Normale Stil (ausgeglichene Wirkung)</li>
+                                        <li>Low-Key Stil (Dramatische Wirkung durch starkes, gerichtetes Licht. Beinhaltet viel Schatten, hohe Kontraste und scharfe Kanten.)</li>
+                                        <li>High-Key Stil (Freundliche, unwirkliche Wirkung, sehr ausgeleuchtet, kaum Schatten.)</li>
+                                    </ul>
+                                    <br>
+                                    <h4>Beispielsituation Schritt für Schritt</h4>
+                                    
+                                    <p>Apfel als Referenz Objekt</p>
+                            <div class="lectures lecture-video"> <!-- Video-div -->
+                                <video controls>
+                                <source src="../assets/animations/lectures/9_1.mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <p class="subline">
+                                    Schattierung mit zwei Lichtquellen an einem Apfel
+                                </p>
+                                <br/>
+                            </div><!---->
+                            <br/>
+                            <ol>
+                                <li>Strichzeichnung des Motives, Einzeichnen der Lichtquellenanzahl, -art und -richtung
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_1.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Strichzeichnung des Motives
+                                        </p>
+                                    </div><!---->
+                                    <br/>
+                                </li>
+                                <li>Behandle jede Lichtquelle individuell, Einzeichnen beider Eigen- und Schlagschatten </li>
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_2.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Lichtquellen ermitteln
+                                        </p>
+                                    </div><!---->
+                                    <br/>
+                                    <li>Überlappung der Schatten bildet dunkelste Stellen der Schatten </li>
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_3.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Dunkelstestelle herausfinden
+                                        </p>
+                                    </div><!---->
+                                    <br/>
+                                    <li>Schatten in unterschiedlichen Grautönen einzeichnen </li>
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_4.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Schattieren
+                                        </p>
+                                    </div><!---->
+                                    <br/>
+                                    <li>Künstliche Lichtquelle ist gerichteter und stärker, also ist dieser Schatten härter und dunkler </li>
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_5.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Dunkelheiten einzeichnen
+                                        </p>
+                                    </div><!---->
+                                    <br/>
+                                    <li>Hinzufügen des Occlusion Shadows </li>
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_6.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Occlusion Shadow
+                                        </p>
+                                    </div><!---->
+                                    <br/>
+                                    <li>Hinzufügen der Halbtöne beider Eigenschatten</li>
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_7.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Halbtöne
+                                        </p>
+                                    </div><!---->
+                                    <br/>
+                                    <li>Weicher Verlauf des natürlichen Eigenschattens beachten</li>
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_8.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Helligkeitsverläufe beachten
+                                        </p>
+                                    </div><!---->
+                                    <br/>
+                                    <li>Details hinzufügen (Schattierung des Stils, Stilgrube, Stil in Schlagschatten aufgreifen)</li>
+                                    <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                        <img class="lecture-image" src="../assets/pictures/lectures/9-licht-schatten_2/9_9.jpg" alt="Kugel"/>
+                                        <p class="subline">
+                                            Details
+                                        </p>
+                                    </div><!---->
+                                    <br/>   
+                            </ol>
+                        
+                            <br/>
+                           <h2>Zusammenfassung</h2>
+                            <br/>
+                            <audio id="audio2" src="../assets/audio/9-licht-schatten_2/lecture_9_2.mp3"></audio> <!-- Sprechertext Teil 2 -->
+                            <p id="startAudio2">
+                                Bei zwei oder mehr Lichtquellen kannst du erstmal genauso vorgehen wie bei einer. Anfangs behandelst du beide Lichtquellen gleich, erst beim Ausfüllen, 
+                                wenn du dem Schatten Grauwerte gibst muss die Art der Lichtquelle und die Helligkeit des Lichtes beachtet werden. Anschließend kannst du noch ein paar Details hinzufügen. Fertig!
+                            </p>
+                            <br>
+                            <h3 style="color: #ea9d03;">Aufgabe</h3> <!-- h3 für Aufgabe/Anregung am Ende in Orange -->
+                            <p>Such dir ein Motiv und zeichne dieses mehrmals, mit jeweils einer anderen Lichtquelle.
+
+                                Suche dir ein Motiv auf das natürliches Licht fällt. Beobachte im Laufe des Tages wie sich die Schatten verändern.</p>
+                            <br>
+                            <div id="end-popup-outer"> <!-- Start PopUp Meine Posts/Nächste Lektion -->
+                                <div id="end-popup-inner">
+                                    <p id="popUpTxt">Gut gemacht! Teile noch heute deine Zeichnung mit der Community. Feedback ist wichtig für deinen Lernerfolg. Trau dich!</p>
+                                    <div id="buttonContainerLectureEnd">
+                                        <input type="button" class="btn" id="toMyPosts" value="Zu meinen Posts" onclick="window.location.href = '../html/community-mydrawings.html';"/>
+                                        <input type="button" class="btn" id="nextLecture" value="Zur nächsten Lektion"/>
+                                    </div>
+                                </div>
+                            </div> <!-- Ende PopUp Meine Posts/Nächste Lektion -->
+                            <div class="lection-end"><!-- Button zum Öffnen des Pops -->
+                                <input type="button" class="btn" id="nextLecturePopUp" value="Zur nächsten Lektion" />
+                            </div><!---->
+                        </div>
+                </div>
+            </main>
+            <footer class="lecture-footer"></footer>
+        </div>
+        <!-- Overlay Sound Popup -->
+        <div class="popup-outer-wrapper" style="display:none">
+            <div class="popup-inner-wrapper profile">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">
+                    <h1 class="popup-header profile">MEIN PROFIL</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar">
+                                <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                    LVL X
+                                </span>
+                                <div class="exp-bar">
+                                    <ins style="width:75%"></ins>
+                                </div>
+                                <span class="cur-exp">X / 2000 </span> XP
+                            </div>
+                            <div class="userinfo">
+                                <div class="userinfo-item">
+                                    <span class="user user-name">
+                                        Name
+                                    </span>
+                                    <span class="user user-name-info">
+                                        Daniel Müller
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-id">
+                                        ID
+                                    </span>
+                                    <span class="user user-id-info">
+                                        MuellerStudent98
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-age">
+                                        Alter
+                                    </span>
+                                    <span class="user user-age-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupation">
+                                        Tätigkeit
+                                    </span>
+                                    <span class="user user-occupation-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupationAct">
+                                        Fachrichtung
+                                    </span>
+                                    <span class="user user-occupationAct-info">
+                                        -
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-item form-container">
+                            <form>
+                                <div>
+                                    <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="soundSwitch();checkAudio();" id="btnsettings">
+                                </div>
+                                <div class="not-sign">
+                                    Nicht dein Account?
+                                    <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="../scripts/loggedin.js"></script>
+            </div>
+        </div>
+    </body>
+</html>

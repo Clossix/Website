@@ -1,0 +1,181 @@
+.hide-meta-data{
+    display: none;
+}
+
+h1{
+    margin-bottom: 3rem;
+}
+
+h2{
+    margin-bottom: 1rem;
+}
+
+.challenge{
+    padding: 1.5rem;
+    border-radius: 1rem;
+    box-shadow: 2px 5px 12px -3px rgb(180, 180, 180);
+    margin-bottom: 2rem;
+}
+
+.challenge h3{
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.challenge p{
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+p.challenge-day{
+    font-size: 2rem;
+    color: #ea9d03; 
+    font-weight: 700;
+    text-transform: uppercase;
+    text-align: right;
+}
+
+.new-post-button{
+    border-radius: 1rem;
+    box-shadow: 2px 5px 12px -3px rgb(180, 180, 180);
+    height: 4.5rem;
+    width: 100%;
+    padding: 0.75rem 1.25rem;
+    margin-bottom: 3rem;
+    cursor: pointer;
+}
+
+.new-post-button-inner{
+    padding: 0.75rem 1.5rem;
+    width: 100%;
+    height: 100%;
+    background-color: #F0F0F0;
+    border-radius: 0.7rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.new-post-button-inner p{
+    width: 100%;
+    color: #707070;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.new-post-button-inner img{
+    height: 100%;
+    filter: brightness(150%);
+}
+
+.challenge-posts-container{
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
+}
+
+.challenge-post{
+    width: 32%;
+    padding: 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 5px 12px -3px rgb(180, 180, 180);
+    margin-bottom: 0.5rem;
+
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.post-author-pic{
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.4rem;
+}
+
+.post-author-pic img{
+    height: 100%;
+    margin-right: 0.4rem;
+    border-radius: 1rem;
+}
+
+.post-author-pic p{
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #aaa;
+    letter-spacing: 0.01rem;
+}
+
+b{
+    color: #ea9d03; 
+    font-weight: 600;
+}
+
+.post-img{
+    width: 100%;
+    height:9rem;
+    border-radius: 1rem;
+    object-fit:cover;
+    object-position: 0;
+}
+
+.post-stamp-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.post-stamp{
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
+
+    height: 1rem;
+    
+}
+
+.post-stamp img{
+    display: block;
+    height:100%;
+}
+
+.post-stamp p{
+    margin-left: 0.4rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.quiz-button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 1.5rem;
+}
+
+.quiz-button{
+    margin-right: 1rem;
+    border-radius: 1rem;
+    box-shadow: 2px 5px 12px -3px rgb(180, 180, 180);
+    height: 3rem;
+    padding: 1rem 1.75rem 1rem 1.25rem;
+    background-color:#F0F0F0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    
+    cursor: pointer;
+}
+
+.quiz-button p{
+    width: 100%;
+    font-size: 1.2rem;
+}
+
+.quiz-button img{
+    height: 100%;
+    margin-right: 1rem;
+}

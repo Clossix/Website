@@ -1,0 +1,309 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/lecture.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand mit aktueller Lektionsnummer überschreiben, beachtet die geänderte Nummerierung!
+                    var lectureProgress = localStorage.setItem("lectureProgress", "11");
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <div class="lecture-nav"> <!-- Button-Navigation oben rechts -->
+                                <button class="lecture-button previous-lecture" id="backButton" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                                <a href="../html/lectures_overview.html" class="lecture-button close-lecture" style="background: url(../assets/icons/icon-cancel.svg);"></a>
+                            </div><!---->
+                            <h1>Komposition & Thumbnails</h1><br/>
+                            <div class="audio-menu"> <!-- Start Audio-Player -->
+                                <button class="audio-button start-audio" id="startAudioButton" onclick="playAudio()">
+                                    <img id="playAudioImg" src="../assets/icons/icon-play.svg"><img>
+                                    <p id="playAudioTxt">Audio aktivieren</p>
+                                    <audio id="audio1" src="../assets/audio/11-komposition/lecture_11_1.mp3"></audio> <!-- Sprechertext Teil 1 -->
+                                </button>
+                                <button class="audio-button pause-audio" id="pauseAudioButton" onclick="pauseAudio()">
+                                    <img id="pauseAudioImg" src="../assets/icons/icon-pause.svg"><img>
+                                    <p id="pauseAudioTxt">Audio pausieren</p>
+                                </button>
+                            </div><!-- Ende Audio-Player -->
+                            <br>
+                            <p>
+                                Auch wenn Du nun in der Lage bist, Dein Motiv technisch sehr gut zu zeichnen, kann es dennoch irgendwie langweilig wirken. Das liegt dann vermutlich an Deiner Bildkomposition. Aber was heißt das?
+                            </p>
+                            <br>
+                            <p>
+                                Als Bildkomposition wird der formale Aufbau eines Bildes bezeichnet, der die Beziehung der Gestaltungselemente zueinander ausmacht.  
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/11-komposition/11-thumbnails-1.jpg" alt="Musik der Formen"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <p>
+                                Die Komposition setzt sich hierbei aus einigen Aspekten zusammen, die Du zum Teil auch schon kennengelernt hast. Hier zählen z.B. die Anordnung der Figuren/Gegenstände, Perspektive, Symmetrie, Licht und Farbe mit rein.
+                            </p>
+                            <br>
+                            <h3>Komposition mit Thumbnails</h3>
+                            <p>
+                                Gerade für komplexere Zeichnungen solltest Du Dir zunächst Gedanken über den Bildaufbau machen und verschiedene Varianten austesten. Um möglichst schnell möglichst viele Variationen erstellen zu können, helfen Dir hier die sogenannten Thumbnails oder auf deutsch Daumennagelskizzen. 
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/11-komposition/11-thumbnails-2.jpg" alt="thumbnails"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h3>Anwendung von Thumbnails</h3>
+                            <p>
+                                Die heißen nicht umsonst so, denn Du solltest sie auch nur in einem so kleinen Format anlegen, um alle Details außen vor zu lassen. Hier ein paar Tipps, worauf Du beim Zeichnen von Thumbnails achten solltest:  
+                            </p>
+                            <ul>
+                                <li>Thumbnails sollten dasselbe Format haben wie die finale Zeichnung</li>
+                                <li>Wenn du zu viel Zeit an einem einzelnen Thumbnail verbringst, kann es hilfreich sein, Dir einen Timer auf ca. 5 Minuten zu stellen</li>
+                                <li>Versuche, deine Gegenstände nur als grobe Blöcke anzusehen, die du arrangierst und blende alle Details aus</li>
+                                <li>Es kann helfen, sie mit einem etwas stumpferen Bleistift anzulegen, um gezwungen zu sein, grob zu bleiben</li>
+                            </ul>
+                            <br/>
+                            <h3>Was ist eine gute Komposition?</h3>
+                            <p>
+                                Was eine gute Komposition ausmacht, lässt sich nicht klar definieren. Deine Komposition ist dann gut, wenn Du deine Bildaussage bestmöglich vermittelst. Jedoch gibt es einige Elemente, die Dich dabei unterstützen können.   
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/11-komposition/11-thumbnails-3.jpg" alt="Komposition"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h4>Vorder-, Mittel- und Hintergrund</h4>
+                            <p>
+                                Zunächst solltest Du Dir über die Bildebenen Gedanken machen. Generell unterteilt man ein Bild in drei Tiefenebenen: Vordergrund, Mittelgrund und Hintergrund. <br> Es ist wichtig, alle drei Ebenen zu nutzen, um deinem Bild Tiefe zu verleihen und so die Illusion von Räumlichkeit zu schaffen. Objekte im Vordergrund sind vergleichsweiße groß und je weiter sie in den Hintergrund rücken, desto kleiner werden sie.    
+                            </p>
+                            <br>
+                            <div class="lectures lecture-video"> <!-- Video-div -->
+                                <video controls>
+                                <source src="../assets/animations/lectures/11-thumbnails-3.mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <p class="subline">
+                                    Aufbau Vorder-, Mittel- und Hintergrund
+                                </p>
+                                <br/>
+                            </div>
+                            <br>
+                            <h4>Goldener Schnitt</h4>
+                            <p>
+                                Von einem der bekanntesten Gestaltungsmittel, bzw. aller Teilungsverhältnisse, hast Du bestimmt auch schon mal gehört: Es geht um den goldenen Schnitt. Hier wird eine Strecke so unterteilt, dass das Verhältnis der kleineren Teilstrecke (b) zur größeren Teilstrecke (a) dem der größeren Strecke zur Gesamtstrecke (a+b) entspricht.    
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/11-komposition/11-thumbnails-4.jpg" alt="Goldener Schnitt"/>
+                                <p class="subline">
+                                    Goldener Schnitt
+                                </p>
+                            </div>
+                            <br>
+                            <p>
+                                Diese Proportion gilt oft als ein Garant für besonders ansprechende und harmonische Bilder. Belege gibt es hierfür aber nicht. Dennoch kann es Dir gerade am Anfang helfen, deine Bildkomposition aufzuwerten, z.B. um dein Motiv aus der Mitte zu rücken, wo es oft als statisch und langweilig wahrgenommen wird.    
+                            </p>
+                            <br>
+                            <h4>Rule of Thirds</h4>
+                            <p>
+                                Eine simplere Version dieses Teilungsverhältnisses wird als “Rule of Thirds” oder auch “Drittel-Regel” bezeichnet. Wie der Name schon sagt, wird hier das Bild horizontal und vertikal gedrittelt. Ordnest Du deine Elemente auf den Schnittpunkten der Linien an, so erhältst du eine optisch ansprechendere Bildkomposition.    
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/11-komposition/11-thumbnails-5.jpg" alt="Rule of Thirds"/>
+                                <p class="subline">
+                                    Rule of Thirds
+                                </p>
+                            </div>
+                            <br>
+                            <h4>Symmetrie</h4>
+                            <p>
+                                Das letzte Hilfsmittel, was wir hier ansprechen wollen, kennst Du vielleicht noch aus der Schule: Die Symmetrie. Stehen Bildelemente nämlich einer Symmetrieachse gegenüber, so wirken sie harmonischer. Doch Achtung: Ein rein symmetrischer Aufbau kann schnell langweilig wirken. Bringe bewusst Unregelmäßigkeiten in Dein Bild, um es lebendiger zu machen.    
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/11-komposition/11-thumbnails-6.jpg" alt="Symmetrie"/>
+                                <p class="subline">
+                                    Symmetrie
+                                </p>
+                            </div>
+                            <br>
+                            <h3>Schlusswort</h3>
+                            <audio id="audio2" src="../assets/audio/11-komposition/lecture_11_2.mp3"></audio> <!-- Sprechertext Teil 2 -->
+                            <p id="startAudio2">
+                                Sehr gut, du bist jetzt nicht nur Experte in den technischen Grundlagen, sondern kannst nun auch deine Bilder mithilfe der Kompositionsmethoden spannend aufbauen! 
+                            </p>
+                            <br>
+                            <h3 style="color: #ea9d03;">Aufgabe</h3>
+                            <p>
+                                Überlege doch nun einmal, wie Du den Apfel aus Licht und Schatten II so darstellen kannst, dass dein Bild besonders spannend wirkt. Probiere dafür einfach ganz viele Möglichkeiten mit schnellen Thumbnail-Zeichnungen aus und entscheide dich dann für die Version, die Dich am meisten anspricht.
+                            </p>
+                            <div id="end-popup-outer"> <!-- Start PopUp Meine Posts/Nächste Lektion -->
+                                <div id="end-popup-inner">
+                                    <p id="popUpTxt">Gut gemacht! Teile noch heute deine Zeichnung mit der Community. Feedback ist wichtig für deinen Lernerfolg. Trau dich!</p>
+                                    <div id="buttonContainerLectureEnd">
+                                        <input type="button" class="btn" id="toMyPosts" value="Zu meinen Posts" onclick="window.location.href = '../html/community-mydrawings.html';"/>
+                                        <input type="button" class="btn" id="nextLecture" value="Zur nächsten Lektion"/>
+                                    </div>
+                                </div>
+                            </div> <!-- Ende PopUp Meine Posts/Nächste Lektion -->
+                            <div class="lection-end">
+                                <input type="button" class="btn" id="nextLecturePopUp" value="Zur nächsten Lektion" />
+                            </div>
+                        </div>
+                </div>
+            </main>
+            <footer class="lecture-footer"></footer>
+        </div>
+    <!-- Overlay Sound Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();checkAudio();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

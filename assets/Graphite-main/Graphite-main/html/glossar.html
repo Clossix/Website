@@ -1,0 +1,509 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graphite</title>
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="../data/manifest.json" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/glossar.css" />
+
+    <!-- SCRIPT -->
+    <script src="../scripts/pleaserotate.js"></script>
+    <script src="../scripts/home.js" defer></script>
+    <script src="../scripts/user.js" type="module" defer></script>
+    <script src="../scripts/glossar.js" defer></script>
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- iOS Support -->
+    <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+</head>
+
+<body class="home">
+    <header>
+        <div class="icon-main">
+            <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+        </div>
+        <nav class="nav-top">
+            <ul>
+                <li>
+                    <div class="login-button" onclick="showPopup('profile')">
+                        <img src="../assets/pictures/dummy-avatar.jpg" alt="Home" />
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+    </header>
+    <div class="wrapper-main">
+        <aside>
+            <nav class="nav-main">
+                <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary-active.svg" alt="Glossary" /></a>
+                <hr />
+                <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+            </nav>
+        </aside>
+        <main>
+            <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+            <div class="boxshadow-wrapper">
+                <div class="content">
+                    <h1>Glossar</h1>
+                </div>
+                <div class="content">
+                    <div class="sort-button-container">
+                        <a class="sort-button sort-button-active" >abc</a>
+                        <a class="sort-button" href="glossar_sort-lecture.html">Lektion</a>
+                    </div>
+                    <div class="glossar">
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Bildkomposition</h2>
+                                    <p class="entry-category">Komposition & Thumbnails</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Als Bildkomposition wird der formale Aufbau eines Bildes bezeichnet, der die Beziehung der Gestaltungselemente zueinander ausmacht.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_11.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Brainstorming</h2>
+                                    <p class="entry-category">Kreativtechniken</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Eine Technik für das Zusammentragen von viele Ideen in kurzer Zeit. Die Art der Darstellung ist nicht von Bedeutung, solange keine Zeit verloren geht. Hier gilt Quantität vor Qualität und deswegen müssen die Zeichnungen auf kein Fall sauber sein.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_13.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Coreshadow</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Der Coreshadow wird auch als Kernschatten bezeichnet und beschreibt die dunkelste Stelle eines Eigenschattens am Objekt selbst. Er liegt gegenüber der Lichtquelle am Objekt. </p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_1.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Doodeln</h2>
+                                    <p class="entry-category">Starter Guide</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Als Doodeln wird die Tätigkeit beschrieben nebenher und in bedanken, Figuren und Skizzen anzufertigen ohne ein konkretes Ziel vor Augen. Also das vor sich hin zeichnen.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_1.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Eigenschatten</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Der Eigenschatten wird auch Körperschatten genannt und beschreibt den Schatten am Objekt selbst. Dieser ist unterteilt in Halbtöne und den Coreshadow (Kernschatten)</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_5.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Fluchtpunkt</h2>
+                                    <p class="entry-category">Perspektivisches Zeichnen 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Ein Punkt eines perspektivischen Bildes, in dem die Fluchtlinien der Objekte aufeinander laufen, die im Original zueinander parallel sind.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_8.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Goldener Schnitt</h2>
+                                    <p class="entry-category">Komposition & Thumbnails</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Als Goldener Schnitt wird eines der bekanntesten Gestaltungsmittel bezeichnet, da er oft als Garant für besonders ansprechende und harmonische Bilder angeführt wird. Es handelt sich um ein Teilungsverhältnis mit der mathematischen Definition: a/b = a+b/a.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_11.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Halbtöne</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Halbtöne sind ist Teil eines Eigenschattens und beschreibt die Grautöne zwischen den Highlights und dem Coreshadow.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_5.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Hero-Element</h2>
+                                    <p class="entry-category">Stillleben</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Das wichtigste Element in einer Zeichnung wird auch als Hero-Element bezeichnet. Der Künstler sollte darauf achten, das die Aufmerksamkeit zu diesem Bildausschnitt gelenkt wird.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_12.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Highlight</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Das Highlight ist die hellste Stelle eines Objektes. Diese ist zur Lichtquelle gekehrt.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_5.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Horizontlinie</h2>
+                                    <p class="entry-category">Perspektivisches Zeichnen 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Die Horizontlinie ist die Grenze zwischen Erde und Himmel. In einer perspektivischen Zeichnung handelt es sich um eine horizontale Linie, die über quer über das Bild verläuft.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_8.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Kontrast</h2>
+                                    <p class="entry-category">Stillleben</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Kontrast bezieht sich auf den Grad der Veränderung innerhalb der Zeichnung anhand bestimmten Eigenschaften. Zum Beispiel gibt es den Helligkeitskontrast, der sich auf den Unterschied zwischen hellen und dunklen Stellen bezieht.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_12.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Lichtquelle</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Eine Lichtquelle beschreibt in einer Szene von welchem Objekt das Licht erzeugt wird. Dies könnte zum Beispiel die Sonne oder eine Art von Lampe sein.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_5.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Lichtreflexion</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Eine Lichtreflexion ist Licht, dass an einer Oberfläche abprallt und auf ein anderes Objekt fällt. Zum Beispiel die Lichtrelexion vom Boden auf den unteren Part eines Objektes in den Eigenschatten hinein.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_5.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Lichtrichtung</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Die Lichtrichtung beschreibt die Richtung aus der das Licht strahlt. Dabei ist auch der Einstrahlwinkel wichtig. Von der Lichtrichtung hängt die Platzierung des Schlagschattens ab.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_5.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Lineart</h2>
+                                    <p class="entry-category">Zeichenprozess</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Dieser Begriff kommt aus dem Englischen und bedeutet wörtlich übersetzt „Linienkunst“. Damit werden alle gezeichneten Linien innerhalb einer Zeichnung gemeint.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_14.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Oberfläche</h2>
+                                    <p class="entry-category">Stillleben</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Jedes Objekt hat eine Oberfläche und diese muss zusammen mit der richtigen Textur beim Zeichnen nachgeahmt werden. Oberflächen haben bestimmte Eigenschaften, die zur Kategorisierung verwendet werden und das Zeichnen vereinfachen.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_12.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Occlusion Shadow</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Der Occlusion Shadow beschreibt den dunklen Schatten zwischen dem Objekt und dem Untergrund, er wird auch Umgebungsverdeckungsschatten genannt.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_5.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Rule of Thirds</h2>
+                                    <p class="entry-category">Komposition & Thumbnails</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Die Rule of Thirds oder auch Drittel-Regel ist eine Vereinfachung des Goldenen Schnitts. Wie der Name schon sagt, wird hier das Bild horizontal und vertikal gedrittelt.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_11.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Schlagschatten</h2>
+                                    <p class="entry-category">Licht und Schatten 1</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Der Schlagschatten ist der Schatten von einem Objekt auf einem Untergrund, dieser befindet sich gegenüber der Lichtquelle.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_5.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Stillleben</h2>
+                                    <p class="entry-category">Stillleben</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Als Stillleben werden spezielle Zeichnungen bezeichnet, die ein oder mehrere Objekte darstellt, die nicht lebendig sind.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_12.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Textur</h2>
+                                    <p class="entry-category">Texturen</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Textur ist die Art und Weise, wie sich etwas anfühlt oder aussieht, als ob es sich anfühlen könnte, wenn man es berührt.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_7.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Thumbnail</h2>
+                                    <p class="entry-category">Komposition & Thumbnails</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Thumbnails, auch Daumennagelskizzen genannt, sind sehr kleine, schnell gezeichnete Bilder, die zur Bestimmung der Bildkomposition genutzt werden.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_11.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Tonwert</h2>
+                                    <p class="entry-category">Richtig Sehen</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Als Tonwerte werden die unterschiedlichen Helligkeitsabstufungen bezeichnet, die in jedem Bild und auch in der Umgebung vorliegen. Ein Tonwert entspricht genau einem Grauton. </p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_4.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Value</h2>
+                                    <p class="entry-category">Zeichenprozess</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Value kann im Deutschen auch als Tonwert bezeichnet werden und bezieht sich auf die Werte bei der Modellierung von Licht, Schatten und Farbe. </p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_14.html">Zur Lektion</a>
+                            </div>
+                        </div>
+                        <div  class="glossar-entry">
+                            <div class="entry-left" onclick="openEntry(this)">
+                                <div class="entry-title-category">
+                                    <h2>Zeichenprozess</h2>
+                                    <p class="entry-category">Zeichenprozess</p>
+                                </div>
+                                <p class="entry-text-placeholder">Mehr Details</p>
+                                <p class="entry-text">Für jede neue Zeichnung gibt es unterschiedliche Herangehensweisen. Ein Zeichenprozess ist quasi eine Schritt-für-Schritt-Anleitung bei der Erstellung von Zeichnungen.</p>
+                            </div>
+                            <div class="entry-right">
+                                <a class="entry-link-button" href="../html/lecture_14.html">Zur Lektion</a>
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" class="ico" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Lectures" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    22
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    Student
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form action="/html/index_login.html">
+                            <div>
+                                <input type="submit" class="btn" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="submit" class="btn" value="Benachrichtigungen" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="submit" class="btn" value="Einstellungen" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='/index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="/scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+
+<!-- <div class="lecture-item" data-headline="Richtig sehen können"></div> -->
+
+</html>

@@ -1,0 +1,50 @@
+.lernspiel-area{
+    width: 80vw;    
+}
+
+.lernspeil-field{
+  position: relative;
+  margin: auto;
+  width: 60vw;
+  display: flex;
+}
+
+
+  
+  
+  .hold {
+    border: solid 5px #ccc;
+  }
+
+  
+  .wrapper {
+    position: relative;
+    width: 60vw;
+    display: flex;
+    
+  }
+  
+  .empty {
+    margin: 1rem;
+    width: 4rem;
+    height: 4rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 4rem;
+    border: solid 1px rgb(80, 80, 80);
+    
+  }
+  
+  .drag {
+
+    position: absolute;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 4rem;
+    z-index: 1;
+    padding: 6px;
+  }
+  
+  .active {
+   
+    border: solid 1px #ea9d03;
+  }

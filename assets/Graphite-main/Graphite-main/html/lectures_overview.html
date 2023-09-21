@@ -1,0 +1,364 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graphite</title>
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="../data/manifest.json" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../style/main.css" />
+
+    <!-- SPECIAL CSS -->
+    <link rel="stylesheet" href="../style/lecture_overview.css" />
+
+    <!-- SCRIPT -->
+    <script src="../scripts/pleaserotate.js"></script>
+    <script defer src="../scripts/home.js"></script>
+    <script defer src="../scripts/user.js" type="module"></script>
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- iOS Support -->
+    <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+</head>
+
+<body class="home">
+    <header>
+        <div class="icon-main">
+            <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+        </div>
+        <nav class="nav-top">
+            <ul>
+                <li>
+                    <div class="login-button" onclick="showPopup('profile')">
+                        <img src="../assets/pictures/dummy-avatar.jpg" alt="Home" />
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+    </header>
+    <div class="wrapper-main">
+        <aside>
+            <nav class="nav-main">
+                <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                <hr />
+                <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+            </nav>
+        </aside>
+        <main>
+            <div class="boxshadow-wrapper">
+                <div class="content" style="padding-bottom: 1.5rem;"> <!--gets filled with JSON data-->
+                    <h3 id="h3_json"></h3>
+                    <h1 class="h1_orange" id="h1_json"></h1>
+                    <br>
+                    <p class="p_threequarter-length" id="text_json"></p>
+                </div>
+                <div class="lectures-overview-wrapper"> <!--card swiper-->
+                    <div class="lectures swiper-wrapper">
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Starter-Guide</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/1-starter-guide/1_6.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Zeichenmaterialien</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/2-zeichenmaterialien/2_1.jpg" alt="Lecture Img"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Tonwerte und Schraffuren</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/3-tonwerte-schraffuren/3_4.png" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Richtig Sehen lernen</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/4-richtig-sehen-lernen/4_5.jpg" alt="Lecture Img"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Licht und Schatten 1</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/5-licht-schatten_1/5_8.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Licht und Schatten 1: Lernspiel</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lernspiel/auswahl_7.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Texturen</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/7-texturen/7_4.png" alt="Lecture Img"/>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Perspektivisches Zeichnen 1</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/8-perspektive_1/8-perspektive_1_2.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Licht und Schatten 2</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/9-licht-schatten_2/9_11.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Perspektivisches Zeichnen 2</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/10-perspektive_2/10-perspektivie_2_3.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Komposition & Thumbnails</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/11-komposition/11-thumbnails-3.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Stillleben</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/12-stillleben/12-ananas-3.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Kreativtechniken</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/13-kreativtechniken/13-kreativtechniken-4.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Zeichenprozess</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lectures/14-zeichenprozess/14-drawing-4.jpg" alt="Lecture Img" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-headline">Abschluss-Quiz</div>
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/lernquiz/lernquiz-aufgabe-1-1.png" alt="Lecture Img" style="padding: 1.5rem; height: 15rem;"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar swiper-scrollbar-horizontal" style="position: relative;">
+                        <div class="swiper-scrollbar-drag"></div>
+                    </div>
+                    </div>
+                </div>
+                <script type="module">
+                    import getUserData from "../scripts/user.js";
+                    import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js';
+                    var currentLectureProgress;
+                    //Localstorage
+                    if(localStorage.getItem("lectureProgress") != ""){
+                        currentLectureProgress = localStorage.getItem("lectureProgress");
+                    }
+                    
+                    //var lectureProgress = localStorage.setItem("lectureProgress", "2");
+                    //UserData JSON
+                    var currentUserData = getUserData();
+                    //Lecture -> Aktueller Fortschritt
+                    let help = String(window.location);
+                    var lectureUrl = help.replace("lectures_overview.html", "") + 'lecture_1.html';
+                    
+
+                    //initialize Swiper
+                    var lecturesSwiper = new Swiper('.lectures-overview-wrapper', {
+                            "slidesPerView": "3",
+                            "initialSlide": (0),
+                            "centeredSlides": true,
+                            scrollbar: {
+                                el: '.swiper-scrollbar',
+                                draggable: true,
+                                dragSize: 30,
+                                hide: false,
+                            },
+                            on: { 
+                                slideChange: function () {  //called, when slides change
+                                    const index_currentSlide = lecturesSwiper.realIndex;
+                                    currentSlide = lecturesSwiper.slides[index_currentSlide]
+                                    //
+                                    lectureState = index_currentSlide;
+                                    xmlhttp.onload = function() {
+                                        lectures = JSON.parse(this.responseText);
+                                        document.getElementById("h1_json").innerHTML = lectures[lectureState].title;
+                                        document.getElementById("h3_json").innerHTML = lectures[lectureState].level;
+                                        document.getElementById("text_json").innerHTML = lectures[lectureState].description;
+                                    };
+                                    xmlhttp.open("GET", "../data/lecture-overview.json");
+                                    xmlhttp.send();
+                                    //
+                                    var lectureUrl = help.replace("lectures_overview.html", "") + 'lecture_' + (index_currentSlide + 1) + '.html';
+                                    currentSlide.addEventListener('click', function () {
+                                    window.location.href = lectureUrl;
+                                    });
+                                },
+                            },
+                        }
+                    );
+                    const xmlhttp = new XMLHttpRequest();
+                    var lectureState;
+                    var lectures;
+
+                    if (lectureState === undefined) {
+                        lectureState = 0;
+                    }
+
+                    xmlhttp.onload = function() {
+                    lectures = JSON.parse(this.responseText);
+                        document.getElementById("h1_json").innerHTML = lectures[lectureState].title;
+                        document.getElementById("h3_json").innerHTML = lectures[lectureState].level;
+                        document.getElementById("text_json").innerHTML = lectures[lectureState].description;
+                    };
+                    xmlhttp.open("GET", "../data/lecture-overview.json");
+                    xmlhttp.send();
+                    
+                    var currentSlide = lecturesSwiper.slides[0];
+                    currentSlide.addEventListener('click', function () {
+                        window.location.href = lectureUrl;
+                    });
+
+                </script>
+            </div>
+        </main>
+    </div>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

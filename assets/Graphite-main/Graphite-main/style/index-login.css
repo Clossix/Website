@@ -1,0 +1,15 @@
+.lecture-inner {
+    justify-content: space-between;
+    height: 16rem !important;
+    width: 16rem !important;
+    padding: 1rem 0.75rem !important;
+}
+
+.lecture-image {
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 1rem;
+}
+

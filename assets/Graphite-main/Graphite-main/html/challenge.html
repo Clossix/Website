@@ -1,0 +1,318 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graphite</title>
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="../data/manifest.json" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/challenge.css" />
+
+    <!-- SCRIPT -->
+    <script src="../scripts/pleaserotate.js"></script>
+    <script src="../scripts/home.js" defer></script>
+    <script src="../scripts/user.js" type="module" defer></script>
+    <script src="../scripts/community.js" defer></script>
+    <script src="../scripts/challenge.js" defer></script>
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- iOS Support -->
+    <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+</head>
+
+<body class="home" onload="getPostDataChallenge()">
+    <header>
+        <div class="icon-main">
+            <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+        </div>
+        <nav class="nav-top">
+            <ul>
+                <li>
+                    <div class="login-button" onclick="showPopup('profile')">
+                        <img src="../assets/pictures/dummy-avatar.jpg" alt="Home" />
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+    </header>
+    <div class="wrapper-main">
+        <aside>
+            <nav class="nav-main">
+                <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge-active.svg" alt="Challenges" /></a>
+                <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                <hr />
+                <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+            </nav>
+        </aside>
+        <main>
+            <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+            <div class="boxshadow-wrapper">
+                <div class="content">
+                    <h1>Challenge</h1>
+                    <div class="challenge">
+                        <p class="challenge-day">#16</p>
+                        <h3>Übung macht den Meister</h3>
+                        <p>Jeder hat seine Stärken und Schwächen. Viele wollen genau das zeichnen, was sie gut zeichnen können. Mache heute mal das genaue Gegenteil. Zeichne das, was du am wenigsten gut kannst und erzähle der Community davon.</p>
+                    </div>
+                    <div class="new-post-button">
+                        <div onclick="openNewPost()" class="new-post-button-inner">
+                            <p>Jetzt deine Zeichnung teilen!</p>
+                            <img src="../assets/icons/nav/icon-challenge.svg">
+                        </div>
+                    </div>
+                    <h2>Schau mal was die anderen gemacht haben!</h2>
+                    <div class="challenge-posts-container">
+                        <div id="post-3" class="challenge-post" onclick="openPost(this)">
+                            <div class="hide-meta-data">
+                                <h2>Lieber Kissen als Manga</h2>
+                                <p class="post-text">#16 - Ich bin heute motiviert. Hier ist noch ein Kissen! Besser als Manga!</p>
+                                <p class="post-date">08.07.22</p>
+                            </div>
+                            <div class="post-author-pic">
+                                <img src="../assets/pictures/commenters/felx.jpg">
+                                <p class="post-author"><b>felx</b></p>
+                            </div>
+                            <img class="post-img" src="../assets/pictures/posts/felix-7.jpeg">
+                            <div class="post-stamp-container">
+                                <div class="post-stamp">
+                                    <img class="heart-icon" src="../assets/icons/icon-herz.svg">
+                                    <p class="post-likes">1</p>
+                                </div>
+                                <div class="post-stamp">
+                                    <img src="../assets/icons/icon-comment.svg">
+                                    <p class="post-comments">0</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post-5" class="challenge-post" onclick="openPost(this)">
+                            <div class="hide-meta-data">
+                                <h2>Mein erster Hai!</h2>
+                                <p class="post-text">#16 - Die Challenge hat mich dazu gebracht mal einen Hai zu zeichnen. Gut? Schlecht?</p>
+                                <p class="post-date">08.07.22</p>
+                            </div>
+                            <div class="post-author-pic">
+                                <img src="../assets/pictures/commenters/mac.jpg">
+                                <p class="post-author"><b>mac</b></p>
+                            </div>
+                            <img class="post-img" src="../assets/pictures/posts/marc-3.jpg">
+                            <div class="post-stamp-container">
+                                <div class="post-stamp">
+                                    <img class="heart-icon" src="../assets/icons/icon-herz.svg">
+                                    <p class="post-likes">16</p>
+                                </div>
+                                <div class="post-stamp">
+                                    <img src="../assets/icons/icon-comment.svg">
+                                    <p class="post-comments">13</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post-7" class="challenge-post" onclick="openPost(this)">
+                            <div class="hide-meta-data">
+                                <h2>Zerknülltes Papier</h2>
+                                <p class="post-text">#16 - Ihr solltet mal probieren ein zerknülltes Papier zu zeichnen. So viele Details..</p>
+                                <p class="post-date">08.07.22</p>
+                            </div>
+                            <div class="post-author-pic">
+                                <img src="../assets/pictures/commenters/bella.jpg">
+                                <p class="post-author"><b>bella</b></p>
+                            </div>
+                            <img class="post-img" src="../assets/pictures/posts/isabelle-1.jpeg">
+                            <div class="post-stamp-container">
+                                <div class="post-stamp">
+                                    <img class="heart-icon" src="../assets/icons/icon-herz.svg">
+                                    <p class="post-likes">8</p>
+                                </div>
+                                <div class="post-stamp">
+                                    <img src="../assets/icons/icon-comment.svg">
+                                    <p class="post-comments">1</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post-8" class="challenge-post" onclick="openPost(this)">
+                            <div class="hide-meta-data">
+                                <h2>Schuhe sind mir sehr wichtig</h2>
+                                <p class="post-text">#16 - Nachdem ich die Zeichnung für die Challenge fertig hatte, wollt ich unbedingt noch einen Schuh zeichnen.</p>
+                                <p class="post-date">08.07.22</p>
+                            </div>
+                            <div class="post-author-pic">
+                                <img src="../assets/pictures/commenters/felx.jpg">
+                                <p class="post-author"><b>felx</b></p>
+                            </div>
+                            <img class="post-img" src="../assets/pictures/posts/felix-4.jpeg">
+                            <div class="post-stamp-container">
+                                <div class="post-stamp">
+                                    <img class="heart-icon" src="../assets/icons/icon-herz.svg">
+                                    <p class="post-likes">17</p>
+                                </div>
+                                <div class="post-stamp">
+                                    <img src="../assets/icons/icon-comment.svg">
+                                    <p class="post-comments">3</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post-9" class="challenge-post" onclick="openPost(this)">
+                            <div class="hide-meta-data">
+                                <h2>Hände.. meine ewiger Feind</h2>
+                                <p class="post-text">#16 - Wieso kann ich Hände nicht gut zeichnen? Ich sollte das jeden Tag üben eigentlich..</p>
+                                <p class="post-date">08.07.22</p>
+                            </div>
+                            <div class="post-author-pic">
+                                <img src="../assets/pictures/commenters/mac.jpg">
+                                <p class="post-author"><b>mac</b></p>
+                            </div>
+                            <img class="post-img" src="../assets/pictures/posts/marc-2.jpg">
+                            <div class="post-stamp-container">
+                                <div class="post-stamp">
+                                    <img class="heart-icon" src="../assets/icons/icon-herz.svg">
+                                    <p class="post-likes">4</p>
+                                </div>
+                                <div class="post-stamp">
+                                    <img src="../assets/icons/icon-comment.svg">
+                                    <p class="post-comments">6</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="post-10" class="challenge-post" onclick="openPost(this)">
+                            <div class="hide-meta-data">
+                                <h2>Challenge Time - Meine Tasche</h2>
+                                <p class="post-text">#16 - Mit Stoffen habe ich so meine Probleme. Die heutige Challenge wollte ich deswegen ausnutzen, um zu üben. Habt ihr Tipps?</p>
+                                <p class="post-date">08.07.22</p>
+                            </div>
+                            <div class="post-author-pic">
+                                <img src="../assets/pictures/commenters/felx.jpg">
+                                <p class="post-author"><b>felx</b></p>
+                            </div>
+                            <img class="post-img" src="../assets/pictures/posts/felix-6.jpeg">
+                            <div class="post-stamp-container">
+                                <div class="post-stamp">
+                                    <img class="heart-icon" src="../assets/icons/icon-herz.svg">
+                                    <p class="post-likes">5</p>
+                                </div>
+                                <div class="post-stamp">
+                                    <img src="../assets/icons/icon-comment.svg">
+                                    <p class="post-comments">3</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>Teste dein Wissen mit dem Lernquiz</h2>
+                    <div class="quiz-button-container">
+                        <div class="quiz-button" onclick="window.open('lecture_15.html', '_self');">
+                            <img src="../assets/icons/nav/icon-challenge.svg">
+                            <p>Lernquiz</p>
+                        </div>
+                        <div class="quiz-button" onclick="window.open('lecture_6.html', '_self');">
+                            <img src="../assets/icons/icon-play.svg">
+                            <p>Lernspiel</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

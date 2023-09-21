@@ -1,0 +1,172 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json">
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css">
+        <link rel="stylesheet" href="../style/info.css">
+
+        <!-- JQUERY SCRIPT -->
+        <script src="../scripts/preventrotate.js"></script>
+        <script defer src="../scripts/home.js" ></script>
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="../index.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('login')">
+                            LOGIN
+                        </div>
+                    </li>
+                    <li>
+                        <div class="signup-button" onclick="showPopup('signup')">
+                            REGISTRIEREN
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <img class="bg-img" src="../assets/pictures/Home_Drawing.png" alt="Home"/>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../index.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home"/></a>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr/>
+                    <a href="#" onclick="showPopup('login')"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Help" /></a>
+                    <a href="../html/about.html"><img src="../assets/icons/nav/icon-about-active.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <div class="content">
+                    <h1>
+                        Informationen
+                    </h1>
+                    <div class="about">
+                        <input type="button" class="btn" onclick="location.href='../html/imprint.html'" value="Impressum"/>
+                        <input type="button" class="btn" onclick="location.href='../html/privacy.html'" value="Datenschutz"/>
+                    </div>
+                </div>
+            </main>
+        </div>
+        <!-- Overlay Popup -->
+        <div class="popup-outer-wrapper" style="display:none">
+            <div class="popup-inner-wrapper login">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">    
+                    <h1 class="popup-header login">JETZT ANMELDEN</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar avatar-before">
+                                <img src="../assets/icons/icon-user-circle.svg" alt="Lectures" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                 LVL 0
+                                </span>
+                                <div class="exp-bar">
+                                  <ins style="width:0%"></ins>
+                                </div>
+                                0 / 2000 XP
+                              </div>
+                        </div>
+                        <div class="popup-item form-container">
+                            <form action="../html/index_login.html">
+                                <div class="form-item">
+                                    <label for="loginMail">Username / E-Mail</label>
+                                    <input type="email" placeholder="MuellerStudent98" id="loginMail">
+                                </div>
+                                <div class="form-item">
+                                    <label for="loginPass">Passwort</label>
+                                    <input type="password" placeholder="**********" id="loginPass">
+                                </div>
+                                <div>
+                                    <input type="submit" class="btn" value="Login">
+                                </div>
+                                <div class="not-sign">
+                                    Kein Account? 
+                                    <span class="link-text" onclick="closePopup();showPopup('signup')">Hier Registrieren</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="popup-inner-wrapper signup" style="display:none;">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">    
+                    <h1 class="popup-header signup">JETZT REGISTRIEREN</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar avatar-before">
+                                <img src="../assets/icons/icon-user-circle.svg" alt="Lectures" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                 LVL 0
+                                </span>
+                                <div class="exp-bar">
+                                  <ins style="width:0%"></ins>
+                                </div>
+                                0 / 2000 XP
+                              </div>
+                        </div>
+                        <div class="popup-item login-container">
+                            <form action="../html/index_login.html">
+                                <div class="form-item">
+                                    <label for="signupSurname">Vorname</label>
+                                    <input type="text" placeholder="Vorname" id="signupSurname">
+                                </div>
+                                <div class="form-item">
+                                    <label for="signupName">Nachname</label>
+                                    <input type="text" placeholder="Nachname" id="signupName">
+                                </div>
+                                <div class="form-item">
+                                    <label for="signupMail">Username / E-Mail</label>
+                                    <input type="email" placeholder="Email" id="signupMail">
+                                </div>
+                                <div class="form-item">
+                                    <label for="signupPass">Passwort</label>
+                                    <input type="password" placeholder="Password" id="signupPass">
+                                </div>
+                                <div>
+                                    <input type="submit" class="btn" value="Registrieren">
+                                </div>
+                                <div class="not-sign">
+                                    Schon registriert? 
+                                    <span class="link-text" onclick="closePopup();showPopup('login')">Hier Einloggen</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedout.js"></script>
+        </div>
+    </body>
+
+</html>

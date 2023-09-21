@@ -1,0 +1,281 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="../html/index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe-active.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <h1>Hilfe</h1><br/>
+                            <br>
+                            <p>
+                               Du brauchst Hilfe bei der Bedienung der App? Keine Sorge, hier kannst du nochmal alles nachlesen! 
+                            </p>
+                            <br>
+                            
+                            
+                            <h3>Navigation</h3>
+                            <p>Da du nun eingeloggt bist kannst du auf alle Funktionen der App zugreifen. Momentan befindest du dich auf dem Home Bildschirm.</p>
+                            <br>
+                            <p>
+                                Du kannst von hier aus zu den einzelnen Lektionen, den Community Hub besichtigen, an Challenges teilnehmen, im Glossar Fachbegriffe nachschlagen und dir Hilfe suchen. Auch kannst du dein Profil einsehen. Außerdem siehst du deinen aktuellen Lektionsfortschritt.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/hilfe/Hilfe_2.JPG" alt="Hilfe Bild"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <br>
+
+
+                            <h3>Nutzerprofil</h3>
+                            <p>
+                                Hier kannst du dein persönliches Level einsehen, deine persönlichen Daten, sowie deine Beiträge aus dem Community Hub, deine aktuellen Benachrichtigungen und den Autoplay aktivieren oder deaktivieren. 
+                            </p>
+                            <br>
+                            <p>
+                                Dies lässt sich alles jederzeit ändern und anpassen. Außerdem kannst du dich hier ausloggen. Du gelangst von jeder Unterseite wieder auf dein Profil.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/hilfe/Hilfe_3.JPG" alt="Hilfe Bild"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <br>
+
+                            
+                            <h3>Lektionsübersicht</h3>
+                            <p>
+                                Mit unserer App kannst du flexibel in eine für dich passende Schwierigkeitsstufe einsteigen! Es gibt die Stufen Anfänger, Fortgeschrittener und Experte. Keine Angst! Du kannst jederzeit dein Level anpassen! 
+                            </p>
+                            <br>
+                            <p>
+                                Innerhalb dieser Stufen gibt es unterschiedliche Lektionen, welche sich in einer von uns empfohlenen Reihenfolge                                 befinden. Du kannst jedoch nach deinem Belieben zwischen den einzelnen Lektionen wechseln!
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/hilfe/Hilfe_4.JPG" alt="Hilfe Bild"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <br>
+
+
+                            <h3>Lektionen 1/2</h3>
+                            <p>
+                                Innerhalb einer Lektion findest du wissenswertes über das jeweilige Thema. Es gibt eine Vorlesefunktion, die du als guten Einstieg in die Themen nutzen kannst. 
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/hilfe/Hilfe_5.JPG" alt="Hilfe Bild"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <br>
+
+
+                            <h3>Lektionen 2/2</h3>
+                            <p>
+                                Durch Zeichnungen, Beispiele, Schritt-für-Schritt-Anleitungen und Animationen erfährst du mehr zu den jeweiligen Lektionen. Am Ende der Lektionen bieten wir dir Übungen, Tipps und Aufgaben. Diese kannst du frei umsetzten und dein neu gewonnenes Wissen anwenden. 
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/hilfe/Hilfe_6.JPG" alt="Hilfe Bild"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <br>
+
+
+                            <h3>Community</h3>
+                            <p>
+                                Gerne kannst du deine Werke in unserem Community Hub posten. Dort bieten dir andere User Inspiration und Tipps zu deinen Werken. Du kannst dir die neusten Beiträge der Community ansehen, liken und kommentieren! Auch kannst du deine eignen Beiträge einsehen.
+                            </p>
+                            <br>                             
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/hilfe/Hilfe_7.JPG" alt="Hilfe Bild"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <br>
+
+
+                            <h3>Challenge</h3>
+                            <p>
+                                Schau gerne in unsere Daily Challenges und suche die Herausforderung!  Hier bekommst du freie Aufgaben gestellt, bei denen du deine Kreativität und Können fördern kannst. Auch werden Lösungen der Community zu diesem Thema gezeigt und bieten dir somit Anregungen und Ideen.
+                            </p>
+                            <br>
+                            <p>
+                                Das alles und noch viel mehr erwartet dich in der App Graphite! Lege gleich los und erforsche die Inhalte selbst!
+                            </p>                                
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/hilfe/Hilfe_8.JPG" alt="Hilfe Bild"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <input type="button" onclick="resetIntroLoad();" class="btn" id="loadIntro" value="Intro zurücksetzen" />
+                        </div>
+                </div>
+            </main>
+            <footer class="lecture-footer"></footer>
+        </div>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

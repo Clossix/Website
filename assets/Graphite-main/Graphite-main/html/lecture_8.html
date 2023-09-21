@@ -1,0 +1,241 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/lecture.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand mit aktueller Lektionsnummer überschreiben, beachtet die geänderte Nummerierung!
+                    var lectureProgress = localStorage.setItem("lectureProgress", "8");
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <div class="lecture-nav"> <!-- Button-Navigation oben rechts -->
+                                <button class="lecture-button previous-lecture" id="backButton" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                                <a href="../html/lectures_overview.html" class="lecture-button close-lecture" style="background: url(../assets/icons/icon-cancel.svg);"></a>
+                            </div><!---->
+                            <h1>Perspektivisches Zeichnen 1</h1><br/>
+                            <div class="audio-menu"> <!-- Start Audio-Player -->
+                                <button class="audio-button start-audio" id="startAudioButton" onclick="playAudio()">
+                                    <img id="playAudioImg" src="../assets/icons/icon-play.svg"><img>
+                                    <p id="playAudioTxt">Audio aktivieren</p>
+                                    <audio id="audio1" src="../assets/audio/8-perspektive-1/lecture_8_1.mp3"></audio> <!-- Sprechertext Teil 1 -->
+                                </button>
+                                <button class="audio-button pause-audio" id="pauseAudioButton" onclick="pauseAudio()">
+                                    <img id="pauseAudioImg" src="../assets/icons/icon-pause.svg"><img>
+                                    <p id="pauseAudioTxt">Audio pausieren</p>
+                                </button>
+                            </div><!-- Ende Audio-Player -->
+                            <br/>
+                            <h3>Einleitung</h3>
+                            <p>
+                                Die Perspektive gehört zum Zeichnen dazu und spielt eine erheblich wichtige Rolle, 
+                                da es die Ansicht der Realität widerspiegelt. 
+                                In der dreidimensionalen Abbildung wird zwischen der Parallelprojektion und der Perspektivischen Projektion unterschieden. 
+                                Falls Dir diese beiden Begriffe nichts sagen, hilft Dir diese Abbildung bestimmt weiter.
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/8-perspektive_1/8-perspektive_1_1.jpg" alt="Kugel"/>
+                                <p class="subline">
+                                    Links perspektivisch und rechts <b>orthografisch</b> bzw. <b>isometrisch.</b> 
+                                </p>
+                            </div><!---->
+                            <br/>
+                            <h3>Verständnis</h3>
+                            <p>
+                                Wenn Du noch in der Schule bist oder Dich noch an den Mathematikunterricht erinnerst, 
+                                müsste Dir die rechte Ansicht sofort etwas sagen. Die orthografische Ansicht wird vor allem im Ingenieurwesen benötigt, 
+                                weil alle Objekte bzw. Linien im gleichen Maßstab dargestellt werden. Dies erleichtert die Einschätzung der relativen Größen. 
+                                Anders beim Zeichnen. Dort benutzen wir die Perspektive um eine Tiefenwirkung zu erzeugen. 
+                            </p>
+                            <br/>
+                            <p>
+                                In diesem Kapitel behandeln wir die 1-Punkt-Perspektive d.h. wir haben lediglich einen einzigen Fluchtpunkt auf einer Horizontlinie. 
+                                Im <b>Kapitel: "Richtig Sehen lernen"</b> hast Du schon gelernt, wie man Abbildungen in ihre Grundformen runterbrechen kann. 
+                                Nun zeichnen wir genau diese Grundformen in Perspektive. 
+                            </p>
+                            <br/>
+                            <h3>Zusammenfassung</h3>
+                            <p>   
+                                In der 1-Punkt-Perspektive verlaufen die Fluchtlinien, d.h. die Punkte, die in die Tiefe gehen, 
+                                genau zu diesem einen Fluchtpunkt. Dieser Fluchtpunkt befindet sich normalerweise im Zentrum, 
+                                kann aber auch verschoben werden. Das sieht dann wie folgt aus:
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-video"> <!-- Video-div -->
+                                <video controls poster="../assets/pictures/lectures/8-perspektive_1/8-perspektive_1_2.jpg">
+                                <source  src="../assets/animations/lectures/8_1.mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <p class="subline">
+                                    Animation 1-Punkt-Perspektive
+                                </p>
+                                <br/>
+
+                            </div><!---->
+                            <h3 style="color: #ea9d03;">Aufgabe</h3>
+                            <audio id="audio2" src="../assets/audio/8-perspektive-1/lecture_8_2.mp3"></audio> <!-- Sprechertext Teil 2 -->
+                            <p id="startAudio2">
+                                Versuche nun selbst einmal eigene simple Formen in einer 1-Punkt-Perspektive zu zeichnen. Je besser Du in dieser Übung wirst, umso kompliziertere Formen kannst Du verwenden. Arbeite Dich von Würfeln, Quadern und Pyramiden zu Kugeln, Zylindern und Ausschnitten von Formen.
+                            </p>
+                            <div id="end-popup-outer"> <!-- Start PopUp Meine Posts/Nächste Lektion -->
+                                <div id="end-popup-inner">
+                                    <p id="popUpTxt">Gut gemacht! Teile noch heute deine Zeichnung mit der Community. Feedback ist wichtig für deinen Lernerfolg. Trau dich!</p>
+                                    <div id="buttonContainerLectureEnd">
+                                        <input type="button" class="btn" id="toMyPosts" value="Zu meinen Posts" onclick="window.location.href = '../html/community-mydrawings.html';"/>
+                                        <input type="button" class="btn" id="nextLecture" value="Zur nächsten Lektion"/>
+                                    </div>
+                                </div>
+                            </div> <!-- Ende PopUp Meine Posts/Nächste Lektion -->
+                            <div class="lection-end"><!-- Button zum Öffnen des Pops -->
+                                <input type="button" class="btn" id="nextLecturePopUp" value="Zur nächsten Lektion" />
+                            </div><!---->
+                        </div>
+                </div>
+            </main>
+            <footer class="lecture-footer"></footer>
+        </div>
+        <!-- Overlay Sound Popup -->
+        <div class="popup-outer-wrapper" style="display:none">
+            <div class="popup-inner-wrapper profile">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">
+                    <h1 class="popup-header profile">MEIN PROFIL</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar">
+                                <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                    LVL X
+                                </span>
+                                <div class="exp-bar">
+                                    <ins style="width:75%"></ins>
+                                </div>
+                                <span class="cur-exp">X / 2000 </span> XP
+                            </div>
+                            <div class="userinfo">
+                                <div class="userinfo-item">
+                                    <span class="user user-name">
+                                        Name
+                                    </span>
+                                    <span class="user user-name-info">
+                                        Daniel Müller
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-id">
+                                        ID
+                                    </span>
+                                    <span class="user user-id-info">
+                                        MuellerStudent98
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-age">
+                                        Alter
+                                    </span>
+                                    <span class="user user-age-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupation">
+                                        Tätigkeit
+                                    </span>
+                                    <span class="user user-occupation-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupationAct">
+                                        Fachrichtung
+                                    </span>
+                                    <span class="user user-occupationAct-info">
+                                        -
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-item form-container">
+                            <form>
+                                <div>
+                                    <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="soundSwitch();checkAudio();" id="btnsettings">
+                                </div>
+                                <div class="not-sign">
+                                    Nicht dein Account?
+                                    <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="../scripts/loggedin.js"></script>
+            </div>
+        </div>
+    </body>
+</html>

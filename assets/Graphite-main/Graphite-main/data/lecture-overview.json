@@ -1,0 +1,77 @@
+[
+    {
+      "title": "Starter-Guide",
+      "level": "Anfänger",
+      "description": "Willkommen bei der ersten Lektion! Hier wollen wir mit dem Einstieg und den ersten einfachen Übungen starten."
+    },
+    {
+      "title": "Zeichenmaterialien",
+      "level": "Anfänger",
+      "description": "In dieser Lektion gehen wir die verschiedenen Zeichenmaterialien durch, die man fürs Zeichnen benötigt oder einfach mal ausprobieren kann."
+    },
+    {
+      "title": "Tonwerte und Schraffuren",
+      "level": "Anfänger",
+      "description": "Gerade für das Zeichnen mit Bleistift ist es wichtig, dass Du die Tonwerte deines Motivs erkennst. Was das bedeutet, erfährst du hier."
+    },
+    {
+      "title": "Richtig Sehen lernen",
+      "level": "Anfänger",
+      "description": "In der Lektion “Richtig Sehen lernen” lernst du Objekte und ihre Proportionen zu erkennen und korrekt aufs Blatt zu bringen."
+    },
+    {
+      "title": "Licht und Schatten 1",
+      "level": "Anfänger",
+      "description": "In dieser Lektion lernst du, deinen Motiven durch Schattierung Plastizität zu verleihen."
+    },
+    {
+      "title": "Licht und Schatten 1: Lernspiel",
+      "level": "Anfänger",
+      "description": "Vertiefe dein Wissen aus der vorherigen Lektion mit diesem Lernspiel!"
+    },
+    {
+      "title": "Texturen",
+      "level": "Anfänger",
+      "description": "Wenn Du in deinen Bildern zeigen willst, aus welchen Materialien deine Objekte bestehen, musst Du ihnen Texturen geben. Wie das geht, erfährst du hier."
+    },
+    {
+      "title": "Perspektivisches Zeichnen 1",
+      "level": "Anfänger",
+      "description": "Die Perspektive gehört zum Zeichnen dazu und spielt eine erheblich wichtige Rolle, da es die Ansicht der Realität widerspiegelt. In diesem Kapitel behandeln wir die 1-Punkt-Perspektive."
+    },
+    {
+      "title": "Licht und Schatten 2",
+      "level": "Fortgeschritten",
+      "description": "Du kennst bereits die Grundlagen von Licht und Schatten, doch wie verhält sich der Schatten, wenn zwei oder mehr Lichtquellen das Objekt bestrahlen?"
+    },
+    {
+      "title": "Perspektivisches Zeichnen 2",
+      "level": "Fortgeschritten",
+      "description": "Neben der 1-Punkt-Perspektive gibt es auch noch die 2-Punkt- und 3-Punkt-Perspektive. Was sich dabei ändert, lernst du in dieser Lektion."
+    },
+    {
+      "title": "Komposition & Thumbnails",
+      "level": "Fortgeschritten",
+      "description": "Auch wenn Du nun in der Lage bist, Dein Motiv technisch sehr gut zu zeichnen, kann es dennoch irgendwie langweilig wirken. Das liegt dann vermutlich an Deiner Bildkomposition. Was das heißt, wirst du hier erfahren."
+    },
+    {
+      "title": "Stillleben",
+      "level": "Fortgeschritten",
+      "description": "In diesem Kapitel lernst du alles, was du über Stillleben wissen musst, um eine eigenständige Szene zu zeichnen."
+    },
+    {
+      "title": "Kreativtechniken",
+      "level": "Experte",
+      "description": "In diesem Kapitel haben wir dir ein paar Kreativitätstechniken für Ideen zum Zeichnen zusammengestellt, um dich auf den kommenden Weg vorzubereiten."
+    },
+    {
+      "title": "Zeichenprozess",
+      "level": "Experte",
+      "description": "Wir wollen dir hier zum Abschluss eine Methode an die Hand geben, mit der du fiktive Kunstwerke angehen kannst und dich gleichzeitig anregen, deinen eigenen Weg zu gehen."
+    },
+    {
+      "title": "Abschluss-Quiz",
+      "level": "Experte",
+      "description": "Teste dein neu erlangtes Wissen in diesem Quiz!"
+    }
+]

@@ -1,0 +1,348 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/lecture.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand mit aktueller Lektionsnummer überschreiben, beachtet die geänderte Nummerierung!
+                    var lectureProgress = localStorage.setItem("lectureProgress", "12");
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <div class="lecture-nav"> <!-- Button-Navigation oben rechts -->
+                                <button class="lecture-button previous-lecture" id="backButton" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                                <a href="../html/lectures_overview.html" class="lecture-button close-lecture" style="background: url(../assets/icons/icon-cancel.svg);"></a>
+                            </div><!---->
+                            <h1>Stillleben</h1><br/>
+                            <div class="audio-menu"> <!-- Start Audio-Player -->
+                                <button class="audio-button start-audio" id="startAudioButton" onclick="playAudio()">
+                                    <img id="playAudioImg" src="../assets/icons/icon-play.svg"><img>
+                                    <p id="playAudioTxt">Audio aktivieren</p>
+                                    <audio id="audio1" src="../assets/audio/12-stillleben/lecture_12_1.mp3"></audio> <!-- Sprechertext Teil 1 -->
+                                </button>
+                                <button class="audio-button pause-audio" id="pauseAudioButton" onclick="pauseAudio()">
+                                    <img id="pauseAudioImg" src="../assets/icons/icon-pause.svg"><img>
+                                    <p id="pauseAudioTxt">Audio pausieren</p>
+                                </button>
+                            </div><!-- Ende Audio-Player -->
+                            <br>
+                            <p>
+                                Stelle deine Fähigkeiten und das Wissen der bisherigen Lektionen unter Beweis. In diesem Kapitel lernst du alles, was du über Stillleben wissen musst, um eine eigenständige Szene zu zeichnen. Insbesondere bei anwendungsorientierte Lektionen wie diese hier, ist es wichtig Geduld zu zeigen und bei Bedarf zu wiederholen.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-stillleben-1.jpg" alt="Gegenstände"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h3>Gegenstände finden</h3>
+                            <p>
+                                Stelle deine Fähigkeiten und das Wissen der bisherigen Lektionen unter Beweis. In diesem Kapitel lernst du alles, was du über Stillleben wissen musst, um eine eigenständige Szene zu zeichnen. Insbesondere bei anwendungsorientierte Lektionen wie diese hier, ist es wichtig Geduld zu zeigen und bei Bedarf zu wiederholen.
+                            </p>
+                            <br>
+                            <h4>Gegenstände aufstellen</h4>
+                            <p>
+                                Nachdem du mehrere passende Objekte gesammelt hast, beginnt die Komposition der Szene. Stelle dazu die Gegenstände an einen Ort, den du während dem Zeichnen gut siehst. Die Anordnung ist dir überlassen. Für eine interessante Komposition ist es oft empfehlenswert, die Gegenstände überlappen zu lassen bzw. in direkten Kontakt zu bringen. Spannend sind auch Kontraste in den Oberflächen und Texturen.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-stillleben-2.jpg" alt="Gegenstände"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h4>Hero Element</h4>
+                            <p>
+                                An dieser Stelle noch ein weiterer Tipp für die Komposition der Gegenstände. Damit der Blickfang des Betrachters gelenkt werden kann, ergibt es Sinn, ein Hero-Element zu definieren. Dieses Element soll das interessanteste Objekt der Zeichnung werden. Wende dazu den Goldenen Schnitt bzw. andere Mittel zur Hervorhebung an. Außerdem solltest du für dieses Objekt beim Zeichnen die meiste Zeit investieren und viele Details ausarbeiten. Bei Bedarf kannst du aber auch auf ein Hero-Element verzichten.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-stillleben-3.jpg" alt="Gegenstände"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+
+
+                            <h3>Skizze anfertigen</h3>
+                            <p>
+                                Bist du zufrieden mit der Stillleben-Szene vor dir? Falls ja, kannst du nun den Stift in die Hand nehmen und mit dem Zeichnen loslegen. Beginne mit der groben Skizzierung aller Gegenstände. Zeichne genau das, was du siehst, mit wenig Kraft. Ist eine Linie nicht korrekt, kannst du diese einfach mit einer etwas kräftigeren Linie korrigieren. Radieren ist nur im Notfall notwendig. 
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-ananas-1.jpg" alt="Stillleben"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h4>Detailgrad</h4>
+                            <p>
+                                Auch die Details sollten schon grob in der Skizze eingezeichnet werden. Wenn du deine Augen leicht zusammenkneifst, dann kannst du Linien besser sehen. Skizziere alle Details ein, die du auch später ausarbeiten möchtest.
+                            </p>
+                            <br>
+                            <h4>Überlappungen und Abstände beachten</h4>
+                            <p>
+                                Überprüfe deine Linien beim Zeichnen ständig. Sind die Überlappungen und Abstände zwischen den Elementen mit der Stillleben-Szene vor dir übereinstimmend? Falls nicht, solltest du das lieber jetzt in der Skizze korrigieren als später bei der Detaillierung.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-stillleben-4.jpg" alt="Tipps"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h4>Proportionen beachten</h4>
+                            <p>
+                                Noch ein weiterer Tipp fürs Abzeichnen. Achte auf die Proportionen der Gegenstände. Damit ist zum einen die Verhältnisse zwischen den Längen und Breiten innerhalb eines Objekts gemeint. Aber dies bezieht sich auch auf die Volumenverhältnisse zwischen den Gegenständen. Wenn das korrekt gezeichnet wurde, kannst du eine hohe Genauigkeit erzielen.
+                            </p>
+                            <br>
+
+
+                            <h3>Flip the Canvas</h3>
+                            <p>
+                                Wir Menschen haben ein erstaunliches Gedächtnis und oft wollen wir uns darauf verlassen. Jedoch ist es gerade für Stillleben keine gute Idee. Eine Möglichkeit diese Problematik zu überwinden, ist deine Zeichnung umzudrehen und das Ganze auf dem Kopf zu zeichnen. Dadurch ist man nämlich gezwungen, hoch konzentriert die Szene zu schauen.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-ananas-1-flip.jpg" alt="Flip"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+
+
+                            <h3>Zeichnung ausarbeiten</h3>
+                            <p>
+                                Wenn du zufrieden mit der Skizze bist und alle Punkte beachtet hast, dann ist der schwierigste Schritt getan. Beginne nun mit der Ausarbeitung der Zeichnung. Dieser Schritt ist aufwendig und kann sich über Stunden ziehen. Nehme dir also genug Zeit dafür. Wende deine erlernten Fähigkeiten an, um die Szene vor dir zu replizieren. Achte auf Helligkeitswerte, Licht, Schatten und Texturen. Bestimme selber den Detailgrad.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-ananas-3.jpg" alt="Stillleben"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h4>Vertraue deinem Auge</h4>
+                            <p>
+                                In dieser Lektion kann es nicht oft genug betont werden. Vertraue deinem Auge! Die Szene vor dir gibt dir alle Antworten auf deine Fragen. Wo sind die Werte heller bzw. dunkler? Ist die Oberfläche glatt oder rau? Was ist das für eine Textur? Wie sieht der Schlagschatten aus? Bleibe im ständigen Dialog mit dem, was du siehst.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-stillleben-5.jpg" alt="Auge"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h4>Pausieren</h4>
+                            <p>
+                                Die Ausarbeitung der Zeichnung kann lange dauern. Eine Pause hilft dir, deinen Kopf freizubekommen und wieder mehr Fokus für die Details zu haben. Manchmal kann es sogar sinnvoll sein, an einem anderen Tag weiterzuzeichnen. Sorge dafür, dass das Stillleben vor dir während der Pause identisch bleibt.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/12-stillleben/12-stillleben-6.jpg" alt="Wecker"/>
+                                <p class="subline">
+                                    
+                                </p>
+                            </div>
+                            <br>
+                            <h4>Zeichnung „loslassen”</h4>
+                            <p>
+                                Je mehr Mühe man sich gibt, desto schwerer wird es, eine Zeichnung abzuschließen. Jeder, der dieses Hobby ausübt, kennt dieses Problem. Deswegen reden Künstler oft von „Kunstwerke loslassen” oder „Kunstwerke aufgeben”. Auch wenn eine Zeichnung nicht perfekt ist, solltest du trotzdem ein Ende finden. Die nächste Zeichnung wartet schon auf dich. 
+                            </p>
+                            <br>
+                            <div class="lectures lecture-video"> <!-- Video-div -->
+                                <video controls>
+                                <source src="../assets/animations/lectures/12-ananas.mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <p class="subline">
+                                    Timelapse der gesamten Zeichnung
+                                </p>
+                                <br/>
+                            </div>
+                            <br>
+                            <h3>Zusammenfassung</h3>
+                            <audio id="audio2" src="../assets/audio/12-stillleben/lecture_12_2.mp3"></audio> <!-- Sprechertext Teil 2 -->
+                            <p id="startAudio2">
+                                Und? Schon Lust bekommen, endlich die Aufgabe zu bearbeiten? Nach dieser Lektion solltest du bereit sein, mit deinem eigenen Kunstwerk für Stillleben zu beginnen. Du solltest nun die Herangehensweise verstehen und unsere Tipps und Tricks greifen dir unter die Arme.
+                            </p>
+                            <br>
+                            <h3 style="color: #ea9d03;">Aufgabe</h3> <!-- h3 für Aufgabe/Anregung am Ende in Orange -->
+                            <p>
+                                Die abschließende Aufgabe für diesen Schwierigkeitsgrad. Die Aufgabe dieses Mal ist absichtlich offen und du musst selber Entscheidungen treffen. 
+                            </p>
+                            <br>
+                            <p>
+                                Suche dir mindestens 3 Gegenstände und bringe diese in eine interessante Komposition. Erstelle eine Zeichnung von dem, was du siehst. Bestimme selber, welche Zeichenmaterialien du verwenden möchtest.
+                            </p>
+                            <br>
+                            <div id="end-popup-outer"> <!-- Start PopUp Meine Posts/Nächste Lektion -->
+                                <div id="end-popup-inner">
+                                    <p id="popUpTxt">Gut gemacht! Teile noch heute deine Zeichnung mit der Community. Feedback ist wichtig für deinen Lernerfolg. Trau dich!</p>
+                                    <div id="buttonContainerLectureEnd">
+                                        <input type="button" class="btn" id="toMyPosts" value="Zu meinen Posts" onclick="window.location.href = '../html/community-mydrawings.html';"/>
+                                        <input type="button" class="btn" id="nextLecture" value="Zur nächsten Lektion"/>
+                                    </div>
+                                </div>
+                            </div> <!-- Ende PopUp Meine Posts/Nächste Lektion -->
+                            <div class="lection-end"><!-- Button zum Öffnen des Pops -->
+                                <input type="button" class="btn" id="nextLecturePopUp" value="Zur nächsten Lektion" />
+                            </div><!---->
+                        </div>
+                </div>
+            </main>
+            <footer class="lecture-footer"></footer>
+        </div>
+        <!-- Overlay Sound Popup -->
+        <div class="popup-outer-wrapper" style="display:none">
+            <div class="popup-inner-wrapper profile">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">
+                    <h1 class="popup-header profile">MEIN PROFIL</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar">
+                                <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                    LVL X
+                                </span>
+                                <div class="exp-bar">
+                                    <ins style="width:75%"></ins>
+                                </div>
+                                <span class="cur-exp">X / 2000 </span> XP
+                            </div>
+                            <div class="userinfo">
+                                <div class="userinfo-item">
+                                    <span class="user user-name">
+                                        Name
+                                    </span>
+                                    <span class="user user-name-info">
+                                        Daniel Müller
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-id">
+                                        ID
+                                    </span>
+                                    <span class="user user-id-info">
+                                        MuellerStudent98
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-age">
+                                        Alter
+                                    </span>
+                                    <span class="user user-age-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupation">
+                                        Tätigkeit
+                                    </span>
+                                    <span class="user user-occupation-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupationAct">
+                                        Fachrichtung
+                                    </span>
+                                    <span class="user user-occupationAct-info">
+                                        -
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-item form-container">
+                            <form>
+                                <div>
+                                    <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="soundSwitch();checkAudio();" id="btnsettings">
+                                </div>
+                                <div class="not-sign">
+                                    Nicht dein Account?
+                                    <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="../scripts/loggedin.js"></script>
+            </div>
+        </div>
+    </body>
+</html>

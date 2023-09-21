@@ -1,0 +1,268 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/info.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about-active.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                <div class="boxshadow-wrapper">
+                    <div class="content">
+                            <h1>Datenschutzerklärung</h1><br/>
+
+                            <p>
+                                Felix Dedek <br/>
+                                Gleißelstetten 93 <br/> 
+                                E-mail: INFO.F.DEDEK@GMAIL.COM <br/>
+                                Phone: +49 15678 418191 <br/>
+                                89081 Ulm <br/>
+                                
+                            </p><br/>
+                            <p> 
+                               <b> Weitere Projektbeteiligte</b><br/><br/>
+                                Richard Duchan <br/>
+                                Marc Fischer <br/> 
+                                Isabelle Koppenhöfer <br/>
+                                Kasimir Polivka <br/><br/>
+                            </p><br/>
+                            
+                            <p>
+                                Den behördlichen Datenschutzbeauftragtender Technische Hochschule Ulm erreichen Sie unter datenschutzbeauftragter@hs-ulm.de <br/><br/>
+
+                                Datenschutzbeauftragter der Technische Hochschule Ulm <br/>
+                                Prittwitzstrasse 10 <br/>
+                                89075 Ulm <br/>
+                                Telefon: +49 (0731) 50-208 <br/>
+                                Telefax: +49 (0731) 50-28270 <br/> <br/>
+
+                                Die folgenden Datenschutzhinweise geben Ihnen einen Überblick über die Erfassung und Verarbeitung von Daten zu Ihrer Person in unseren Webangeboten.  <br/> <br/>
+                                Sollten Sie an weitergehenden Informationen interessiert sein, so finden Sie diese hier: https://studium.hs-ulm.de/de/Seiten/Datenschutzerklaerung.aspx <br/>
+                            </p><br/>
+
+                            <h2>Wer sind wir?</h2><br/>
+                            <p> 
+                                Wir freuen uns, Sie auf den Webseiten der Hochschule Ulm begrüßen zu dürfen. Genauere Angaben über unsere Firma finden Sie im Impressum: <br/> <br/>
+                                https://www.dm.hs-ulm.de/Impressum/ <br/> <br/>
+                                Wir setzen teilweise Partnerunternehmen für die Verarbeitung von Daten ein. Die volle Verantwortung für die Datenverarbeitung verbleibt bei uns.
+                            </p><br/>
+
+                            <h2>Warum erfassen wir Daten von Ihnen?</h2><br/>
+                            <p> 
+                                Wir erfassen Daten über Ihre Person ausschließlich im gesetzlich vorgesehenen Rahmen zu folgenden Zwecken: <br/> <br/>
+                                - Zur Gewährleistung der Betriebssicherheit unseres Webanagebots, d.h. zur Missbrauchserkennung und Störungsbeseitigung. <br/>
+                                - Zur Optimierung der Darstellung der Antworten auf Ihrem Computer. <br/>
+                                - Zur Erfüllung gesetzlicher Auskunftspflichten gegenüber staatlichen Stellen. <br/>
+                                - Zur Auskunftserteilung gegenüber Inhabern von Urheber- und Leistungsschutzrechten auf Aufforderung dieser. <br/>
+                            
+                            </p><br/>
+
+                            <h2>Welche Daten erfassen wir von Ihnen?</h2><br/>
+                            <p> 
+                                Unser Webangebot erfasst einige Daten über Ihren Computer bereits während der Nutzung unseres Webangebots. 
+                                Daten mit direktem Personenbezug erfragen wir bei Bedarf über entsprechende Kontaktformulare. 
+                                Wir erfassen technische Merkmale über Ihren Computer. 
+                                Im wesentliche sind dies Name bzw. IP-Adresse Ihres Computers, der verwendete Webbrowser (Hersteller, Versionsnummer), 
+                                das Betriebssystem Ihres Computers sowie die Anfragen Ihres Webbrowsers und die Antworten unseres Webservers hierauf.
+                            </p><br/>
+                            
+                            <h2>Wie schützen wir Ihre Daten?</h2><br/>
+                            <p> 
+                                Zunächst reduzieren wir die erfassten Daten auf ein Minimum und verzichten soweit wie möglich auf Cookies un Social-Media-Plugins (z.B. „Like Buttons“). 
+                                Wir verwenden Cookies nur um Ihre Identität nach einem Login zu speichern. So verhindern wir, 
+                                dass Sie sich ständig neu anmelden müssen und gegebenenfalls Opfer eines Hackerangriffs werden. 
+                                Wir verzichten auf Social-Media-Plugins.
+                            </p><br/>
+
+                            <h2>Wie lange halten wir Ihre Daten vor?</h2><br/>
+                            <p> 
+                                Wir speichern Ihre Daten nur solange, wie sie zur Erfüllung des jeweiligen Zwecks erforderlich sind. 
+                                Bei Newslettern etwa solange Sie dem Versand nicht widersprechen. Daten, die für statistische Auswertungen längerfristig benötigt werden, 
+                                werden ausschließlich ohne direkten Bezug zu Ihrer Person, d.h. in pseudonymisierter Form, gespeichert. Protokolldaten zur Missbrauchserkennung speichern wir im gesetzlichen Rahmen für 7 Tage.
+                            </p><br/>
+
+                            <h2>Welche Rechte haben Sie?</h2><br/>
+                            <p> 
+                                Sie haben das Recht auf Information über Art, Zweck und Umfang der von uns durchgeführten Datenverarbeitung. 
+                                Sie haben das Recht auf weitere Auskunft zur Verarbeitung Ihrer persönlichen Daten, bei Fehlern haben Sie das Recht auf Löschung bzw. Korrektur oder auf Einschränkung der Verarbeitung. 
+                                Sie können gegebenen Einwilligungen jederzeit formlos widersprechen. <br/>
+                                Wenn Sie der Meinung sind, wir würden Ihrem Anliegen zum Datenschutz nicht angemessen nachkommen, 
+                                haben Sie das Recht auf Beschwerde bei der zuständigen Datenschutzbehörde. https://www.bfdi.bund.de/DE/Infothek/Anschriften_Links/anschriften_links-node.html
+                            </p><br/>
+
+                            <h2>An wen wende ich mich bei Fragen zum Datenschutz?</h2><br/>
+                            <p> 
+                                Wenn Sie Fragen zum Datenschutz haben, so wenden Sie sich vorzugsweise an unseren behördlichen Datenschutzbeauftragten unter datenschutzbeauftragter@hs-ulm.de oder per Telefon: 0173/50-208 (Telefonzentrale).
+                            </p><br/>
+
+                            <h2>Wo erhalte ich weitergehende Informationen?</h2><br/>
+                            <p> 
+                                Diese Datenschutzhinweise geben Ihnen einen Überblick über die Erhebung und Verarbeitung Ihrer Daten.   <br/> <br/>
+                                Detaillierte Informationen finden Sie in unserer ausführlichen Datenschutzerklärung: https://studium.hs-ulm.de/de/Seiten/Datenschutzerklaerung.aspx.  <br/>
+                            </p><br/>
+
+                            <h2>Verwendete Begrifflichkeiten</h2><br/>
+                            <p> 
+                                „Personenbezogene Daten“ sind alle Informationen, die sich auf eine identifizierte oder identifizierbare natürliche Person (im Folgenden „betroffene Person“) beziehen; 
+                                als identifizierbar wird eine natürliche Person angesehen, die direkt oder indirekt, insbesondere mittels Zuordnung zu einer Kennung wie einem Namen, zu einer Kennnummer, 
+                                zu Standortdaten, zu einer Online-Kennung (z.B. Cookie) oder zu einem oder mehreren besonderen Merkmalen identifiziert werden kann, 
+                                die Ausdruck der physischen, physiologischen, genetischen, psychischen, wirtschaftlichen, kulturellen oder sozialen Identität dieser natürlichen Person sind. 
+                                „Verarbeitung“ ist jeder mit oder ohne Hilfe automatisierter Verfahren ausgeführten Vorgang oder jede solche Vorgangsreihe im Zusammenhang mit personenbezogenen Daten. 
+                                Der Begriff reicht weit und umfasst praktisch jeden Umgang mit Daten. Als „Verantwortlicher“ wird die natürliche oder juristische Person, Behörde, Einrichtung oder andere Stelle, 
+                                die allein oder gemeinsam mit anderen über die Zwecke und Mittel der Verarbeitung von personenbezogenen Daten entscheidet, bezeichnet.
+                            </p><br/>
+
+                            <h2>Maßgebliche Rechtsgrundlagen</h2><br/>
+                            <p> 
+                                Nach Maßgabe des Art. 13 DSGVO teilen wir Ihnen die Rechtsgrundlagen unserer Datenverarbeitungen mit. 
+                                Sofern die Rechtsgrundlage in der Datenschutzerklärung nicht genannt wird, gilt Folgendes: 
+                                Die Rechtsgrundlage für die Einholung von Einwilligungen ist Art. 6 Abs. 1 lit. a und Art. 7 DSGVO, 
+                                die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer Leistungen und Durchführung vertraglicher Maßnahmen sowie Beantwortung von Anfragen ist Art. 6 Abs. 1 lit. b DSGVO, 
+                                die Rechtsgrundlage für die Verarbeitung zur Erfüllung unserer rechtlichen Verpflichtungen ist Art. 6 Abs. 1 lit. c DSGVO, 
+                                und die Rechtsgrundlage für die Verarbeitung zur Wahrung unserer berechtigten Interessen ist Art. 6 Abs. 1 lit. f DSGVO. Für den Fall, 
+                                dass lebenswichtige Interessen der betroffenen Person oder einer anderen natürlichen Person eine Verarbeitung personenbezogener Daten erforderlich machen, 
+                                dient Art. 6 Abs. 1 lit. d DSGVO als Rechtsgrundlage. <br/> <br/>
+
+                                Die Nutzung dieses Informationsangebots erfolgt im Rahmen der allgemeinen Datenschutzerklärung der Technischen Hochschule Ulm .
+                            </p><br/>
+                        </div>
+                </div>
+            </main>
+            <footer></footer>
+        </div>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

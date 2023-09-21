@@ -1,0 +1,220 @@
+/*--------------
+DM6 SS 2022
+CSS STYLESHEET
+
+COPYRIGHT© TEAM3
+
+FELIX DEDEK
+RICHARD DUCHAN 
+MARC FISCHER
+ISABELLE KOPPENHÖFER
+KASIMIR POLIVKA
+
+LECTURE CSS FILE 
+---------------*/
+
+.wrapper-main .content {
+    width: 100%;
+    padding-right: 4rem;
+}
+
+.wrapper-main .boxshadow-wrapper .content video {
+    max-width: 100%;
+    border-radius: .8rem;
+    padding-top: .5rem;
+}
+
+h1 {
+    font-size: 1.9em;
+    font-weight: 600;
+}
+
+h2 {
+    font-size: 1.3em;
+    font-weight: 500;
+    padding-top: .2em;
+    padding-bottom: .2em;
+}
+
+h3 {
+    padding-top: .18em;
+    padding-bottom: .18em;
+}
+
+h4 {
+    font-weight: 400;
+    font-size: 0.9em;
+    padding-top: .18em;
+    padding-bottom: .18em;
+}
+
+
+p {
+    font-size: .85em;
+    font-weight: 400;
+    width: 85%;
+
+    /* hyphens 
+   -moz-hyphens: auto;
+   -o-hyphens: auto;
+   -webkit-hyphens: auto;
+   -ms-hyphens: auto;
+   hyphens: auto;*/
+}
+
+b {
+    font-weight: 500;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #3665a6c0;
+}
+
+.subline {
+    font-size: .85em;
+    font-weight: 400;
+    color: #757575c0;
+    align-self: flex-end;
+    min-width: fit-content;
+}
+
+.lecture-nav {
+    position: absolute;
+    top: 13rem;
+    right: 6.5rem;
+    height: fit-content;
+    width: auto;
+    display: flex;
+    flex-direction:row;
+    justify-items: end;
+}
+
+.lecture-button {
+    height: 2rem;
+    width: 2rem;
+    border-style:none;
+    background-repeat: no-repeat !important;
+}
+
+.close-lecture {
+    margin-top: .6rem;
+}
+
+.previous-lecture {
+    margin-top: .6rem;
+    margin-right: 2rem;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.lecture-image-div {
+    width: 100%;
+    display: flex;
+	justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.lecture-image {
+    max-width:100%;
+    max-height: 25rem;
+}
+
+ul {
+    padding-top: .5rem;
+    padding-left: 10%;
+}
+
+ol {
+    padding-top: .5rem;
+    padding-left: 10%;
+}
+
+li {
+    font-size: 1.08rem;
+    font-weight: 400;
+    width: 80%;
+    color: #707070;
+    line-height: 1.5;
+}
+
+.lection-end {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.audio-button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 10rem;
+    border-style:none;
+    background-color:rgba(255, 255, 255, 0) !important;
+    align-items: center;
+}
+
+#playAudioImg {
+    max-height: 2rem;
+    max-width: 100%;
+}
+
+#pauseAudioImg {
+    max-height: 2rem;
+    max-width: 100%;
+}
+
+#pauseAudioButton{
+    display: none;
+}
+
+#playAudioTxt {
+    font-size: 1.1em;
+    min-width: fit-content;
+}
+
+#pauseAudioTxt {
+    font-size: 1.1em;
+    min-width: fit-content;
+    color: #ea9d03;
+}
+
+#end-popup-outer {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 95; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+#end-popup-inner {
+    background-color: #fefefe;
+    position: relative;
+    top: 68%;
+    left: 31%;
+    padding: 2rem;
+    border-radius: 2rem;
+    width: 50%; 
+    height: 12rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#popUpTxt {
+    width: 100%;
+}
+
+#buttonContainerLectureEnd {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,479 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graphite</title>
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="../data/manifest.json" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/community.css" />
+
+    <!-- SCRIPT -->
+    <script src="../scripts/pleaserotate.js"></script>
+    <script src="../scripts/home.js" defer></script>
+    <script src="../scripts/user.js" type="module" defer></script>
+    <script src="../scripts/community.js" defer></script>
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- iOS Support -->
+    <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+</head>
+
+<body class="home" onload="getPostData()">
+    <header>
+        <div class="icon-main">
+            <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+        </div>
+        <nav class="nav-top">
+            <ul>
+                <li>
+                    <div class="login-button" onclick="showPopup('profile')">
+                        <img src="../assets/pictures/dummy-avatar.jpg" alt="Home" />
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+    </header>
+    <div class="wrapper-main">
+        <aside>
+            <nav class="nav-main">
+                <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                <a href="../html/community.html"><img src="../assets/icons/nav/icon-community-active.svg" alt="Community" /></a>
+                <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                <hr />
+                <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+            </nav>
+        </aside>
+        <main>
+            <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+            <div class="boxshadow-wrapper">
+                <div class="content">
+                    <h1>Community</h1>
+                    <p>Schau dir an was die anderen in letzer Zeit gemacht haben. <br> 
+                        Nicht nur Zeichnen verbessert deine Fähigkeiten. Sei ein aktiver Teil unserer Community und lerne die Werke der anderen kennen. Wenn du dich mit den Werken anderer Künstler beschäftigst, kannst du deine eigene Fähigkeiten schärfen bzw. Inspiration für die nächste Idee finden.
+                    </p>
+                    <div class="community-buttons">
+                        <div class="new-post-button">
+                            <div onClick="openNewPost()" class="new-post-button-inner">
+                                <p>Jetzt deine Zeichnung teilen!</p>
+                                <img src="../assets/icons/nav/icon-challenge.svg">
+                            </div>
+                        </div>
+                    </div>
+                    <!--
+                    <div class="community-buttons">
+                        <div class="my-posts-button" onclick="clearTheStorage()">
+                            <img src="../assets/icons/icon-cancel.svg">
+                            <p>Reset</p>
+                        </div>
+                    </div>
+                    -->
+                </div>
+                <div class="content">
+                    <div class="button-wrapper-sort-newpost">
+                        <div class="sort-button-container">
+                            <a class="sort-button sort-button-active">neu</a>
+                            <a class="sort-button">beliebt</a>
+                        </div>
+                        <div class="my-posts-button" onclick="openMyDrawings()">
+                            <img src="../assets/icons/icon-bilder.svg">
+                            <p>Meine Posts</p>
+                        </div>
+                    </div>
+                    <div class="community-post-container">
+                        <div id="post-1" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Roboter mit Schädel</h2>
+                                    <p class="post-author">Von <b>Ricky</b></p>
+                                </div>
+                                <p class="post-text">Ein Versuch Roboter und das menschliche Skelett zu vereinen. Digitale Zeichnung von gestern.</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">13</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">0</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/richy-1.jpeg">
+                            </div>
+                        </div>
+                        <div id="post-2" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Ein kleiner Vogel</h2>
+                                    <p class="post-author">Von <b>Mac</b></p>
+                                </div>
+                                <p class="post-text">Vögel sieht man nicht so oft von der Nähe. Ihre Schönheit bleibt uns verborgen.</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">7</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/marc-5.jpg">
+                            </div>
+                        </div>
+                        <div id="post-3" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Lieber Kissen als Manga</h2>
+                                    <p class="post-author">Von <b>Felx</b></p>
+                                </div>
+                                <p class="post-text">#16 - Ich bin heute motiviert. Hier ist noch ein Kissen! Besser als Manga!</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">1</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">1</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/felix-7.jpeg">
+                            </div>
+                        </div>
+                        <div id="post-4" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Holz! Holz! Holz!</h2>
+                                    <p class="post-author">Von <b>Felx</b></p>
+                                </div>
+                                <p class="post-text">Holz ist faszinierend. Es gibt so viele mögliche Texturen rund um das Thema Holz. Übung ist wichtig.</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">4</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">6</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/felix-1.jpeg">
+                            </div>
+                        </div>
+                        <div id="post-5" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Mein erster Hai!</h2>
+                                    <p class="post-author">Von <b>Mac</b></p>
+                                </div>
+                                <p class="post-text">#16 - Die Challenge hat mich dazu gebracht mal einen Hai zu zeichnen. Gut? Schlecht?</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">16</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">13</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/marc-3.jpg">
+                            </div>
+                        </div>
+                        <div id="post-6" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Übung Texturen</h2>
+                                    <p class="post-author">Von <b>Kamir</b></p>
+                                </div>
+                                <p class="post-text">Sind diese Texturen realistisch?</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">9</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">1</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/felix-10.jpeg">
+                            </div>
+                        </div>
+                        <div id="post-7" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Zerknülltes Papier</h2>
+                                    <p class="post-author">Von <b>Bella</b></p>
+                                </div>
+                                <p class="post-text">#16 - Ihr solltet mal probieren ein zerknülltes Papier zu zeichnen. So viele Details..</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">8</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">1</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/isabelle-1.jpeg">
+                            </div>
+                        </div>
+                        <div id="post-8" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Schuhe sind mir sehr wichtig</h2>
+                                    <p class="post-author">Von <b>Felx</b></p>
+                                </div>
+                                <p class="post-text">#16 - Nachdem ich die Zeichnung für die Challenge fertig hatte, wollt ich unbedingt noch einen Schuh zeichnen.</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">17</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/felix-4.jpeg">
+                            </div>
+                        </div>
+                        <div id="post-9" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Hände.. meine ewiger Feind</h2>
+                                    <p class="post-author">Von <b>Mac</b></p>
+                                </div>
+                                <p class="post-text">#16 - Wieso kann ich Hände nicht gut zeichnen? Ich sollte das jeden Tag üben eigentlich..</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">4</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">6</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/marc-2.jpg">
+                            </div>
+                        </div>
+                        <div id="post-10" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Challenge Time - Meine Tasche</h2>
+                                    <p class="post-author">Von <b>Felx</b></p>
+                                </div>
+                                <p class="post-text">#16 - Mit Stoffen habe ich so meine Probleme. Die heutige Challenge wollte ich deswegen ausnutzen, um zu üben. Habt ihr Tipps?</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">5</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">3</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/felix-6.jpeg">
+                            </div>
+                        </div>
+                        <div id="post-11" class="community-post" onclick="openPost(this)">
+                            <div class="post-left">
+                                <div class="post-title-author">
+                                    <h2>Stillleben Übung</h2>
+                                    <p class="post-author">Von <b>Bella</b></p>
+                                </div>
+                                <p class="post-text">Mein 10-ter Tag mit der App.</p>
+                                <div class="post-stamp-container">
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-uhr.svg"> 
+                                        <p class="post-date">08.07.22</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-herz.svg">
+                                        <p class="post-likes">21</p>
+                                    </div>
+                                    <div class="post-stamp">
+                                        <img src="../assets/icons/icon-comment.svg">
+                                        <p class="post-comments">13</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post-right">
+                                <img class="post-img" src="../assets/pictures/posts/isabelle-2.jpeg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

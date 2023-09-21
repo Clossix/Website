@@ -1,0 +1,368 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/lecture.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand mit aktueller Lektionsnummer überschreiben, beachtet die geänderte Nummerierung!
+                    var lectureProgress = localStorage.setItem("lectureProgress", "3");
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <div class="lecture-nav"> <!-- Button-Navigation oben rechts -->
+                                <button class="lecture-button previous-lecture" id="backButton" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                                <a href="../html/lectures_overview.html" class="lecture-button close-lecture" style="background: url(../assets/icons/icon-cancel.svg);"></a>
+                            </div><!---->
+                            <h1>Tonwerte und Schraffuren</h1><br/>
+                            <div class="audio-menu"> <!-- Start Audio-Player -->
+                                <button class="audio-button start-audio" id="startAudioButton" onclick="playAudio()">
+                                    <img id="playAudioImg" src="../assets/icons/icon-play.svg"><img>
+                                    <p id="playAudioTxt">Audio aktivieren</p>
+                                    <audio id="audio1" src="../assets/audio/3-tonwerte-schraffuren/lecture_3_1.mp3"></audio> <!-- Sprechertext Teil 1 -->
+                                </button>
+                                <button class="audio-button pause-audio" id="pauseAudioButton" onclick="pauseAudio()">
+                                    <img id="pauseAudioImg" src="../assets/icons/icon-pause.svg"><img>
+                                    <p id="pauseAudioTxt">Audio pausieren</p>
+                                </button>
+                            </div><!-- Ende Audio-Player -->
+                            <br>
+                            <p>
+                                Gerade für das Zeichnen mit Bleistift ist es wichtig, dass Du die Tonwerte deines Motivs erkennst. Aber was bedeutet das eigentlich? 
+                            </p>
+                            <br>
+                            <p>
+                                In jedem Bild und auch in deiner Umgebung liegen unterschiedliche Helligkeitsabstufungen vor, die Tonwerte genannt werden. Ein Tonwert entspricht genau einem Grauton. 
+                            </p>
+                            <br>
+                            <p>
+                                Auch wenn es sich um ein farbiges Bild handelt, existieren diese Werte. Um sie besser zu erkennen, kannst Du Dein Bild mit einem Filter auf schwarz-weiß reduzieren.
+                            </p>
+                            <br>
+                            <h2>Tonwerte sehen</h2>
+                            <div class="lectures lecture-video"> <!-- Video-div -->
+                                <video controls>
+                                <source src="../assets/animations/lectures/3_1.mp4#t=0.1">
+                                Your browser does not support the video tag.
+                                </video>
+                                <p class="subline">
+                                    Reduktion auf Tonwerte
+                                </p>
+                                <br/>
+                            </div><!---->
+                            <p>
+                                Ohne den Einsatz von Helligkeitsabstufungen wirkt ein Körper zweidimensional, erst mit Schattenverläufen entsteht ein plastischer Eindruck, was Du in den Lektionen “Licht und Schatten” auch noch einmal eingehender behandeln wirst. 
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/3-tonwerte-schraffuren/3_2.png" alt="Kugel"/>
+                                <p class="subline">
+                                    Kugel mit Schraffuren
+                                </p>
+                            </div><!---->
+                            <br/>
+                            <p>
+                                Alle Helligkeitsabstufungen von Hell und Dunkel bilden die Bandbreite der vorhandenen Tonwerte.
+                            </p>
+                            <ul>
+                                <li>starker Hell-Dunkel-Kontrast: fehlende Mitteltöne, im Extremfall reines Weiß und Schwarz (Beispiel: bei sehr kräftigem, direkten Licht)</li>
+                            </ul>
+                            <br/>
+                            <p>
+                                In der Regel ist es für eine spannungsreiche und ansprechende Zeichnung empfehlenswert, dass Du kontrastreich zeichnest. Kontrastarme Zeichnungen wirken oft langweilig.
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-image-div">
+                                <img class="lecture-image" src="../assets/pictures/lectures/3-tonwerte-schraffuren/3_3.png" alt="kontrastarm - kontrastreich"/>
+                                <p class="subline">
+                                    kontrastarm vs. kontrastreich
+                                </p>
+                            </div>
+                            <br>
+                            <h2>Grautöne & Tonwerte schraffieren lernen</h2>
+                            <p>
+                                Das Schraffieren ist eine der wichtigsten Zeichentechniken, mit der Du (unter anderem) ganz einfach Schatten zeichnen kann. Beim Schraffieren werden viele Striche parallel zueinander gezeichnet, um Tonwerte zu erzeugen. 
+                            </p>
+                            <br>
+                            <p>
+                                Es gibt viele verschiedene Arten zu schraffieren:
+                            </p>
+                            <ul>
+                                <li>Änderung der Strichrichtung,</li>
+                                <li>Änderung der Strichdichte,</li>
+                                <li>Änderung der Strichform,</li>
+                                <li>usw…</li>
+                            </ul>
+                            <br/>
+                            <div class="lectures lecture-image-div">
+                                <img class="lecture-image" src="../assets/pictures/lectures/3-tonwerte-schraffuren/3_4.png" alt="Schraffuren"/>
+                                <p class="subline">
+                                    Beispiele von Schraffuren
+                                </p>
+                            </div>
+                            <br/>
+                            <p>
+                                Um diese Helligkeits-Abstufungen gut darzustellen, versuchst Du so zu schraffieren, dass sich der dunkle Strich im Auge des Betrachters mit dem helleren Untergrund (dem Papier) zu einem mittleren Grauton vermischt.
+                            </p>
+                            <br>
+                            <p>
+                                Um verschiedene Tonwerte und Helligkeits-Abstufungen mit Schraffur darzustellen, gibt es beim Zeichnen mit Bleistift drei verschiedene Möglichkeiten:
+                            </p>
+                            <br>
+                            <h4>1. Grautöne schraffieren durch Veränderung der Linien-Dichte</h4>
+                            <p>
+                                Bei dieser Methode erzeugst Du verschiedene Grautöne, indem Du die Linien der Schraffur weiter oder enger zieht.
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div">
+                                <img class="lecture-image" src="../assets/pictures/lectures/3-tonwerte-schraffuren/3_5.png" alt="Liniendichte"/>
+                                <p class="subline">
+                                    Veränderung der Liniendichte
+                                </p>
+                            </div>
+                            <br>
+                            <ul>
+                                <li>weit auseinander liegende Linien: hellste Grautöne 
+                                    <br>
+                                    Vorsicht: Zeichnest Du die Linien zu weit auseinander, verliert sich unter Umständen der Eindruck eines gleichmäßigen Grautons.
+                                </li>
+                                <li>sehr dicht aneinander liegende Linien: dunkelste Grautöne
+                                    <br>
+                                    Tipp: Noch dunklere Tonwerte kann man zum Beispiel mit einer Kreuzschraffur erzeugen, oder ganz allgemein mit mehreren Schraffuren in unterschiedlichen Richtungen.
+                                </li>
+                            </ul>
+                            <br>
+                            <h4>2. Grautöne zeichnen durch Veränderung des Anpressdrucks des Bleistifts</h4>
+                            <p>
+                                Du kannst auch durch Erhöhen und Verringern des Anpressdrucks des Bleistifts unterschiedliche Tonwerte zeichnen. 
+                            </p>
+                            <ul>
+                                <li>starker Druck: dicke Striche → dunkler Grauwert</li>
+                                <li>geringer Druck: dünne Linien → heller Grauwert</li>
+                            </ul>
+                            <br>
+                            <div class="lectures lecture-image-div">
+                                <img class="lecture-image" src="../assets/pictures/lectures/3-tonwerte-schraffuren/3_6.png" alt="Anpressdruck"/>
+                                <p class="subline">
+                                    Veränderung des Anpressdrucks
+                                </p>
+                            </div>
+                            <br>
+                            <p>
+                                Diese Methode ist vorteilhaft, weil enger gezogene Linien Deine Zeichnungen realistischer wirken lassen. Man erkennt hier nämlich nicht so schnell die einzelnen Striche.
+                            </p>
+                            <br>
+                            <h4>3. Tonwerte zeichnen durch Verwendung von unterschiedlichen Bleistifthärten</h4>
+                            <p>
+                                Als dritte Option kannst Du auch unterschiedliche Grauwerte erzeugen, indem Du Bleistifte mit unterschiedlichen Härtegraden verwendet. 
+                            </p>
+                            <ul>
+                                <li>harte Bleistift: helle Grautöne</li>
+                                <li>weicher Bleistift: dunkle Flächen</li>
+                            </ul>
+                            <br>
+                            <div class="lectures lecture-image-div">
+                                <img class="lecture-image" src="../assets/pictures/lectures/3-tonwerte-schraffuren/3_7.png" alt="Bleistifthärten"/>
+                                <p class="subline">
+                                    Veränderung der Bleistifthärte
+                                </p>
+                            </div>
+                            <br>
+                            <p>
+                                Einen Überblick über die Härtegrade von Bleistiften konntest Du Dir ja bereits in der Lektion “Zeichenmaterialien” verschaffen.
+                            </p>
+                            <br>
+                            <h4>Anwendung der verschiedenen Schraffiertechniken zum Zeichnen von Tonwerten</h4>
+                            <p>
+                                In der Praxis ist es häufig so, dass man zwei oder auch alle drei Methoden miteinander kombiniert einsetzt. Die Kombination der Schraffier-Techniken ist sinnvoll, da Du dadurch die vorteilhaften Eigenschaften des Bleistifts voll ausschöpfen kannst.
+                            </p>
+                            <br>
+                            <p>
+                                Beispiel:
+                            </p>
+                            <ul>
+                                <li>dunkle Bereiche: weicher Bleistift, viel Druck, enge Striche</li>
+                                <li>hellere Bereiche: zunächst geringerer Druck, dann härter Bleistift</li>
+                            </ul>
+                            <br>
+                            <h3>Schlusswort</h3>
+                            <audio id="audio2" src="../assets/audio/3-tonwerte-schraffuren/lecture_3_2.mp3"></audio> <!-- Sprechertext Teil 2 -->
+                            <p id="startAudio2">
+                                Mit den Techniken in dieser Lektion hast du schon einen riesigen Schritt nach vorn gemacht! Du kannst deinen Bildern nun Dreidimensionalität verleihen und hast damit eine Menge neuer Möglichkeiten. 
+                            </p>
+                            <br>
+                            <p>
+                                In dieser Übersicht siehst Du nochmal eine Kombination aus dem, was Du in dieser Lektion gelernt hast. Es werden mit unterschiedlichen Schraffuren Helligkeitsverläufe erzeugt:
+                            </p>
+                            <br>
+                            <div class="lectures lecture-image-div">
+                                <img class="lecture-image" src="../assets/pictures/lectures/3-tonwerte-schraffuren/3_8.png" alt="Matrix: Tonwerte - Schraffuren"/>
+                                <p class="subline" style="text-align: right; width:100%;">
+                                    Matrix: Tonwerte - Schraffuren
+                                </p>
+                            </div>
+                            <br>
+                            <h3 style="color: #ea9d03;">Aufgabe</h3>
+                            <p>
+                                Versuche nun einmal selbst, Helligkeitsverläufe zu zeichnen. Du kannst Dir hierfür auch gern eigene Schraffuren ausdenken, wie Kringel, Wellenlinien oder Kreuze.
+                            </p>
+                            <div id="end-popup-outer"> <!-- Start PopUp Meine Posts/Nächste Lektion -->
+                                <div id="end-popup-inner">
+                                    <p id="popUpTxt">Gut gemacht! Teile noch heute deine Zeichnung mit der Community. Feedback ist wichtig für deinen Lernerfolg. Trau dich!</p>
+                                    <div id="buttonContainerLectureEnd">
+                                        <input type="button" class="btn" id="toMyPosts" value="Zu meinen Posts" onclick="window.location.href = '../html/community-mydrawings.html';"/>
+                                        <input type="button" class="btn" id="nextLecture" value="Zur nächsten Lektion"/>
+                                    </div>
+                                </div>
+                            </div> <!-- Ende PopUp Meine Posts/Nächste Lektion -->
+                            <div class="lection-end">
+                                <input type="button" class="btn" id="nextLecturePopUp" value="Zur nächsten Lektion" />
+                            </div>
+                        </div>
+                </div>
+            </main>
+            <footer class="lecture-footer"></footer>
+        </div>
+    <!-- Overlay Sound Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();checkAudio();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

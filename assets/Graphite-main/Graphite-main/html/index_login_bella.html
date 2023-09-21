@@ -1,0 +1,431 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Graphite</title>
+
+    <!-- MANIFEST -->
+    <link rel="manifest" href="../data/manifest.json" />
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="../style/main.css" />
+    <link rel="stylesheet" href="../style/intro.css" />
+    <!-- SCRIPT -->
+    <script src="../scripts/pleaserotate.js"></script>
+    <script defer src="../scripts/home.js" ></script>
+    <script defer src="../scripts/intro.js" ></script>
+    <script defer src="../scripts/user.js"  type="module"></script>
+
+    <!-- SwiperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+    <!-- iOS Support -->
+    <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+    <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+</head>
+
+<body class="home">
+    <header>
+        <div class="icon-main">
+            <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+        </div>
+        <nav class="nav-top">
+            <ul>
+                <li>
+                    <div class="login-button" onclick="showPopup('profile')">
+                        <img src="../assets/pictures/dummy-avatar.jpg" alt="Home" />
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+    </header>
+    <div class="wrapper-main">
+        <aside>
+            <nav class="nav-main">
+                <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home-active.svg" alt="Home" /></a>
+                <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures.svg" alt="Lectures" /></a>
+                <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                <hr />
+                <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+            </nav>
+        </aside>
+        <main>
+            <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+            <div class="boxshadow-wrapper">
+                <div class="content" style="padding-bottom: 1rem;">
+                    <h1>Willkommen zurück, <span class="user-firstName"></span></h1>
+                    <!-- <input type="button" onclick="showIntro('intro')"class="btn" value="TEST" /> -->
+                    <input type="button" class="btn" id="continueLectures" value="Fortfahren" />
+                </div>
+                <div class="lectures-overview-wrapper">
+                    <div class="lectures swiper-wrapper">
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Starter Guide</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                    
+                                </div>
+                                <div class="lecture-headline">Zeichenmaterialien</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />   
+                                </div>
+                                <div class="lecture-headline">Tonwerte und Schraffuren</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Richtig Sehen lernen</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Licht und Schatten 1</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Licht und Schatten 1: Lernspiel</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Texturen</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Perspektivisches Zeichnen 1</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Licht und Schatten 2</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Perspektivisches Zeichnen 2</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Komposition & Thumbnails</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Stillleben</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Kreativtechniken</div>
+                            </div>
+                        </div>
+                        <div class="lecture swiper-slide">
+                            <div class="lecture-inner">
+                                <div class="lecture-image">
+                                    <img src="../assets/pictures/Home_Drawing.png" alt="Lecture Img" />
+                                </div>
+                                <div class="lecture-headline">Zeichenprozess</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <script type="module">
+                    import getUserData from "../scripts/user.js";
+                    import Swiper from 'https://unpkg.com/swiper@8/swiper-bundle.esm.browser.min.js';
+
+                    var currentLectureProgress;
+                    var swiperOptions;
+                    var lectureProgress = localStorage.getItem("lectureProgress");
+
+                    //Localstorage
+                    if(lectureProgress >= 1 && lectureProgress < 15){
+                        currentLectureProgress = localStorage.getItem("lectureProgress");
+                    }
+                    else{
+                        currentLectureProgress = 1;
+                    }
+                    //UserData JSON
+                    var currentUserData = getUserData();
+                    //Lecture -> Aktueller Fortschritt
+                    var currentLecture = document.querySelectorAll('.lectures .lecture')[currentLectureProgress - 1];
+                    currentLecture.classList.add('current');
+                    //Lecture URL
+                    let help = String(window.location);
+                    var lectureUrl = help.replace("index_login.html", "") + 'lecture_' + currentLectureProgress + '.html'; //currentUserData.lectureProgress + '.html'               
+                    //var lectureUrl = window.location.protocol + "//" + window.location.host + "/" + 'html/lecture_' + currentLectureProgress + '.html'; //currentUserData.lectureProgress + '.html'
+                    currentLecture.addEventListener('click', function () {
+                        window.location.href = lectureUrl;
+                    });
+
+                    document.getElementById('continueLectures').addEventListener('click', function () {
+                        window.location.href = lectureUrl;
+                    });
+                    if(currentLectureProgress <= 1){
+                            swiperOptions = {
+                                "centeredSlides": true,
+                                "slidesPerView": 3,
+                                "initialSlide": (currentUserData.lectureProgress - 1),
+                                "noSwiping": true,            
+                                "allowTouchMove": false
+                            };
+                        }
+                    else{
+                        swiperOptions = {
+                        "slidesPerView": 3,
+                        "initialSlide": (currentUserData.lectureProgress - 1),
+                        "noSwiping": false,            
+                        "centeredSlides": true,
+                        "allowTouchMove": false,
+                        "activeIndex": currentUserData.currentlectureProgress
+                    };
+                    }
+                    
+                    var lecturesSwiper = new Swiper('.lectures-overview-wrapper', swiperOptions);
+                    lecturesSwiper.activeIndex = currentLectureProgress - 1;
+                    
+                </script>
+
+                <div class="content">
+                    <div class="content-item">
+                        <h1>Daily Challenges</h1>
+                        <p>Schau nach, was die heutige Herausforderung ist und stelle dein Können unter Beweis.</p><br />
+                        <input type="button" onclick=";location.href='../html/challenge.html'" class="btn" id="challenges" value="Challenge" />
+                        <br />
+                    </div>
+                    <div class="content-item">
+                        <h1>Communityhub</h1>
+                        <p>Sieh dir die neuesten Beiträge der Community an!</p><br />
+                        <input type="button" onclick=";location.href='../html/community.html'" class="btn" id="challenges" value="Community-Hub" />
+                        <br/>
+                    </div>
+                    <!-- Einbau von Community-Post notwendig-->
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- Intro Popup -->
+    <div class="intro-outer-wrapper" style="display:none">
+        <div class="intro-inner-wrapper intro">
+            <div class="intro-close" onclick="closeIntro()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div> 
+            <div class="intro-main">
+                <!-- Hier kommt Slider  -->
+                <div class="slideshow-container">
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                      <div class="numbertext">1 / 8</div>
+                      <img src="../assets/pictures/intro/Intro_Slide_1.jpg" style="width:98%">
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <div class="numbertext">2 / 8</div>
+                      <img src="../assets/pictures/intro/Intro_Slide_2.jpg" style="width:98%">
+                    </div>
+                  
+                    <div class="mySlides fade">
+                      <div class="numbertext">3 / 8</div>
+                      <img src="../assets/pictures/intro/Intro_Slide_3.jpg" style="width:98%">
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">4 / 8</div>
+                        <img src="../assets/pictures/intro/Intro_Slide_4.jpg" style="width:98%">
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">5 /87</div>
+                        <img src="../assets/pictures/intro/Intro_Slide_5.jpg" style="width:98%">
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">6 / 8</div>
+                        <img src="../assets/pictures/intro/Intro_Slide_6.jpg" style="width:98%">
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">7 / 8</div>
+                        <img src="../assets/pictures/intro/Intro_Slide_7.jpg" style="width:98%">
+                      </div>
+
+                      <div class="mySlides fade">
+                        <div class="numbertext">7 / 8</div>
+                        <img src="../assets/pictures/intro/Intro_Slide_8.jpg" style="width:98%">
+                      </div>
+                  
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                  </div>
+                  <br>
+                  
+                  <!-- The dots/circles -->
+                  <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span>
+                    <span class="dot" onclick="currentSlide(5)"></span>
+                    <span class="dot" onclick="currentSlide(6)"></span>
+                    <span class="dot" onclick="currentSlide(7)"></span>
+                    <span class="dot" onclick="currentSlide(8)"></span>
+                  </div>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        localStorage.setItem("intro", "true");
+        var intro_load = localStorage.getItem("intro");
+        if(intro_load == "true")
+        {
+            showIntro('intro');
+            localStorage.setItem("intro", "false");
+        }
+
+        
+    </script>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

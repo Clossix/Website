@@ -1,0 +1,240 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <link rel="stylesheet" href="../style/lernquiz.css"/>
+
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script src="../scripts/home.js" defer></script>
+        <script src="../scripts/user.js" type="module"></script>
+        <script src="../scripts/lernquiz.js" defer></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand überschreiben
+                    //var lectureProgress = localStorage.setItem("lectureProgress", "1");
+                
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                                <h1>14. Bonuslektion</h1><br/>
+                                <p>
+                                    Auf welcher der drei Grafiken ist eine Ein-Punkt-Belichtung von oben zu erkennen? (wähle die richtige Grafik aus)
+                                </p>
+                                <br>
+                                <div class="answer-area">
+                                    <input type="checkbox" id="answer-1-1">
+                                    <label class="answer-field" id="answer-field-1-1" style="opacity: 50%;" >
+                                        <img src="../assets/pictures/lernquiz/lernquiz-aufgabe-1-1.png">
+                                    </label>
+                                    <input type="checkbox" id="answer-1-2">
+                                    <label class="answer-field" id="answer-field-1-2"  >
+                                        <img src="../assets/pictures/lernquiz/lernquiz-aufgabe-1-2.png">
+                                    </label>
+                                    <input type="checkbox" id="answer-1-3">
+                                    <label class="answer-field" id="answer-field-1-3" style="opacity: 50%;" >
+                                        <img src="../assets/pictures/lernquiz/lernquiz-aufgabe-1-3.png">
+                                    </label>
+                                </div>
+                                <div class="spacer"></div>
+                                <p>
+                                    Auf welche Grundform lässt sich das zu sehende Objekt reduzieren? (wähle die richtige Grafik aus)
+                                </p>
+                                <br>
+                                <img src="../assets/pictures/lernquiz/lernquiz-aufgabe-2-1.jpg" style="height: 20vh; margin-bottom: 2rem;">
+                                <br>
+                                <div class="answer-area">
+                                    <input type="checkbox" id="answer-2-1">
+                                    <label class="answer-field" id="answer-field-2-1"  >
+                                        <p>Kreis</p>
+                                    </label>
+                                    <input type="checkbox" id="answer-2-2">
+                                    <label class="answer-field" id="answer-field-2-2" style="opacity: 50%;" >
+                                        <p>Dreieck</p>
+                                    </label>
+                                    <input type="checkbox" id="answer-2-3">
+                                    <label class="answer-field" id="answer-field-2-3" style="opacity: 50%;" >
+                                        <p>Quadrat</p>
+                                    </label>
+                                </div>
+                                <div class="spacer"></div>
+                                
+                                <p>
+                                    Welche der folgenden Materialien kann man zum Zeichnen verwenden?
+                                </p>
+                                <br>
+                                <div class="answer-area">
+                                    <input type="checkbox" id="answer-3-1">
+                                    <label class="answer-field" id="answer-field-3-1" >
+                                        <p>Bleistift</p>
+                                    </label>
+                                    <input type="checkbox" id="answer-3-2">
+                                    <label class="answer-field" id="answer-field-3-2" >
+                                        <p>Papier</p>
+                                    </label>
+                                    <input type="checkbox" id="answer-3-3">
+                                    <label class="answer-field" id="answer-field-3-3" style="opacity: 50%;" >
+                                        <p>Hammer</p>
+                                    </label>
+                                </div>
+                                <br>
+                                <div class="answer-area" style="margin-left: 8vw;">
+                                    <input type="checkbox" id="answer-3-4">
+                                    <label class="answer-field" id="answer-field-3-4" >
+                                        <p>Kohle</p>
+                                    </label>
+                                    <input type="checkbox" id="answer-3-5">
+                                    <label class="answer-field" id="answer-field-3-5" style="opacity: 50%;" >
+                                        <p>Nagel</p>
+                                    </label>
+                                    
+                                </div>
+                                <div class="spacer"></div>
+
+                                <a href="../html/lectures_overview.html" type="button" class="btn" >Lernquiz verlassen</a>
+
+                               
+                                
+                        </div>
+                </div>
+            </main>
+        </div>
+    <!-- Overlay Popup -->
+    <div class="popup-outer-wrapper" style="display:none">
+        <div class="popup-inner-wrapper profile">
+            <div class="popup-close" onclick="closePopup()">
+                <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+            </div>
+            <div class="popup-main">
+                <h1 class="popup-header profile">MEIN PROFIL</h1>
+                <div class="main-content">
+                    <div class="popup-item popup-dummy">
+                        <div class="avatar">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                        </div>
+                        <div class="exp-progress ">
+                            <span class="exp-txt">
+                                LVL X
+                            </span>
+                            <div class="exp-bar">
+                                <ins style="width:75%"></ins>
+                            </div>
+                            <span class="cur-exp">X / 2000 </span> XP
+                        </div>
+                        <div class="userinfo">
+                            <div class="userinfo-item">
+                                <span class="user user-name">
+                                    Name
+                                </span>
+                                <span class="user user-name-info">
+                                    Daniel Müller
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-id">
+                                    ID
+                                </span>
+                                <span class="user user-id-info">
+                                    MuellerStudent98
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-age">
+                                    Alter
+                                </span>
+                                <span class="user user-age-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupation">
+                                    Tätigkeit
+                                </span>
+                                <span class="user user-occupation-info">
+                                    -
+                                </span>
+                            </div>
+                            <div class="userinfo-item">
+                                <span class="user user-occupationAct">
+                                    Fachrichtung
+                                </span>
+                                <span class="user user-occupationAct-info">
+                                    -
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup-item form-container">
+                        <form>
+                            <div>
+                                <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                            </div>
+                            <div>
+                                <input type="button" class="btn" onclick="soundSwitch();" id="btnsettings">
+                            </div>
+                            <div class="not-sign">
+                                Nicht dein Account?
+                                <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <script type="module" src="../scripts/loggedin.js"></script>
+        </div>
+    </div>
+</body>
+</html>

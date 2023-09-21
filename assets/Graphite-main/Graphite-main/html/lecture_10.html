@@ -1,0 +1,268 @@
+<!-- INDEX - HOME-->
+<!DOCTYPE html>
+<html lang="de">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Graphite</title>
+
+        <!-- MANIFEST -->
+        <link rel="manifest" href="../data/manifest.json" />
+
+        <!-- MAIN CSS -->
+        <link rel="stylesheet" href="../style/main.css" />
+        <link rel="stylesheet" href="../style/lecture.css" />
+        <!-- SCRIPT -->
+        <script src="../scripts/pleaserotate.js"></script>
+        <script defer src="../scripts/home.js"></script>
+        <script defer src="../scripts/lecture.js"></script>
+        <script defer src="../scripts/user.js" type="module"></script>
+
+        <!-- SwiperJS -->
+        <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+        <!-- iOS Support -->
+        <link rel="apple-touch-icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <link rel="icon" href="../assets/icons/webapp/WebApp_Icon_144x144.png">
+        <meta name="apple-mobile-web-app-status-bar" content="#ffffff">
+    </head>
+    <body class="home">
+        <header>
+            <div class="icon-main">
+                <a href="index_login.html"><img alt="Graphite" src="../assets/icons/Logo_Website.svg"></a>
+            </div>
+            <nav class="nav-top">
+                <ul>
+                    <li>
+                        <div class="login-button" onclick="showPopup('profile')">
+                            <img src="../assets/pictures/dummy-avatar.jpg" alt="Home"/>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <a href="#" style="display: none;"><img src="" alt="Profilbild" /></a>
+        </header>
+        <div class="wrapper-main">
+            <aside>
+                <nav class="nav-main">
+                    <a href="../html/index_login.html"><img src="../assets/icons/nav/icon-home.svg" alt="Home" /></a>
+                    <a href="../html/lectures_overview.html"><img src="../assets/icons/nav/icon-lectures-active.svg" alt="Lectures" /></a>
+                    <a href="../html/community.html"><img src="../assets/icons/nav/icon-community.svg" alt="Community" /></a>
+                    <a href="../html/challenge.html"><img src="../assets/icons/nav/icon-challenge.svg" alt="Challenges" /></a>
+                    <a href="../html/glossar.html"><img src="../assets/icons/nav/icon-glossary.svg" alt="Glossary" /></a>
+                    <hr />
+                    <a href="../html/hilfe.html"><img src="../assets/icons/nav/icon-hilfe.svg" alt="Hilfe" /></a>
+                    <a href="../html/about-login.html"><img src="../assets/icons/nav/icon-about.svg" alt="About" /></a>
+                </nav>
+            </aside>
+            <main>
+                <script>
+                    //Localstorage - Stand mit aktueller Lektionsnummer überschreiben, beachtet die geänderte Nummerierung!
+                    var lectureProgress = localStorage.setItem("lectureProgress", "10");
+                </script>
+                <button id="toTopBtn" onclick="topFunction()" style="background: url(../assets/icons/icon-pfeil.svg);"></button> <!-- Zurück-nach-oben Button -->
+                <div class="boxshadow-wrapper">
+                        <div class="content">
+                            <div class="lecture-nav"> <!-- Button-Navigation oben rechts -->
+                                <button class="lecture-button previous-lecture" id="backButton" style="background: url(../assets/icons/icon-pfeil.svg);"></button>
+                                <a href="../html/lectures_overview.html" class="lecture-button close-lecture" style="background: url(../assets/icons/icon-cancel.svg);"></a>
+                            </div><!---->
+                            <h1>Perspektivisches Zeichnen 2</h1><br/>
+                            <div class="audio-menu"> <!-- Start Audio-Player -->
+                                <button class="audio-button start-audio" id="startAudioButton" onclick="playAudio()">
+                                    <img id="playAudioImg" src="../assets/icons/icon-play.svg"><img>
+                                    <p id="playAudioTxt">Audio aktivieren</p>
+                                    <audio id="audio1" src="../assets/audio/10-perspektvie-2/lecture_10_1.mp3"></audio> <!-- Sprechertext Teil 1 -->
+                                </button>
+                                <button class="audio-button pause-audio" id="pauseAudioButton" onclick="pauseAudio()">
+                                    <img id="pauseAudioImg" src="../assets/icons/icon-pause.svg"><img>
+                                    <p id="pauseAudioTxt">Audio pausieren</p>
+                                </button>
+                            </div><!-- Ende Audio-Player -->
+                            <br/>
+                            <h3>Einleitung</h3>
+                            <p>
+                                Wir haben uns im Kapitel: Perspektivisches Zeichnen I angeschaut, 
+                                was unter der Perspektive genau gemeint war und wie man diese mit einem Fluchtpunkt umsetzt. 
+                                Neben der 1-Punkt-Perspektive gibt es auch noch die 2-Punkt- und 3-Punkt-Perspektive und wie der Name schon sagt, 
+                                gibt es hier mehr Fluchtpunkte.
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-image-div"> <!-- Bild-div -->
+                                <img class="lecture-image" src="../assets/pictures/lectures/10-perspektive_2/10-perspektivie_2_1.jpg" alt="Kugel"/>
+                                <p class="subline">
+                                    Ausschnit der 2-Punkt-Perspektive
+                                </p> 
+                                <img class="lecture-image" src="../assets/pictures/lectures/10-perspektive_2/10-perspektivie_2_2.jpg" alt="Kugel"/>
+                                <p class="subline">
+                                    Ausschnit der 3-Punkt-Perspektive 
+                                </p>
+                            </div><!---->
+                            <br/>
+                            <h3>Verständnis</h3>
+                            <p>
+                                Wie die Zahl vorne schon sagt, werden hier jeweils zwei bzw. drei Fluchtpunkte eingesetzt. 
+                                Die 2-Punkt-Perspektive verwendet zwei Punkte auf der Horizontlinie, 
+                                die meistens einen großen Abstand zueinander haben. 
+                                Alle vertikalen Linien bleiben gleich und parallel zueinander. 
+                                Die Fluchtlinien links davon gehen zum linken Fluchtpunkt, genauso die rechten Linien zum rechten Punkt. 
+                            <br/><br/>
+                                Mit diesem Wissen können wir nun die Objekte aus der 1-Punkt-Perspektive auch in die 2-Punkt-Perspektive bringen.
+                            </p>
+                            <div class="lectures lecture-video"> <!-- Video-div -->
+                                <video controls poster="../assets/pictures/lectures/10-perspektive_2/10-perspektivie_2_1.jpg">
+                                <source  src="../assets/animations/lectures/10_1.mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <p class="subline">
+                                    Animation - 2-Punkt-Perspektive
+                                </p>
+                                <br/>
+                            </div><!---->
+                            <h3>Zusammenfassung</h3>
+                            <p>   
+                                Die 3-Punkt Perspektive bringt einen dritten Punkt für die vertikalen Linien ein. 
+                                Dieser Punkt kann sich entweder unter oder über der Horizontlinie befinden. 
+                                Statt der ganzen Linie, ist es hier besser mit den Eckpunkten eines Objektes anzufangen und diese anschließend zum 3. Punkt zu verbinden.
+                            </p>
+                            <br/>
+                            <div class="lectures lecture-video"> <!-- Video-div -->
+                                <video controls poster="../assets/pictures/lectures/10-perspektive_2/10-perspektivie_2_2.jpg">
+                                <source  src="../assets/animations/lectures/10_2.mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <p class="subline">
+                                    Animation 1-Punkt-Perspektive
+                                </p>
+                                <br/>
+                            </div><!---->
+                            <p>   
+                                Achte hierbei darauf, dass Du Dich langsam herantastest und versuchst, es zu verstehen. 
+                            </p>
+                            <br/>
+                            <h3 style="color: #ea9d03;">Aufgabe</h3>
+                            <audio id="audio2" src="../assets/audio/10-perspektvie-2/lecture_10_2.mp3"></audio> <!-- Sprechertext Teil 2 -->
+                            <p id="startAudio2">
+                                Haben wir diesen Schritt gemeistert, können wir nun Details hinzufügen und ein wenig ausprobieren. 
+                                Warum testen wir uns nicht an eine eigene kleine Szene wie zum Beispiel dieser handgezeichneten Architekturszene in 2-Punkt-Perspektive. 
+                                Die Lektionen zur Perspektive dienen lediglich zum Verständnis der Tiefenwirkung, 
+                                wir müssen uns nicht haargenau daran halten, da wir sonst einen zu mechanischen Look erzeugen. 
+                                Lass Deiner Kreativität freien Lauf!
+                            </p>
+                            <div class="lectures lecture-video"> <!-- Video-div -->
+                                <video controls poster="../assets/pictures/lectures/10-perspektive_2/10-perspektivie_2_3.jpg">
+                                <source  src="../assets/animations/lectures/10_3.mp4">
+                                Your browser does not support the video tag.
+                                </video>
+                                <p class="subline">
+                                    Animation - Finale Zeichnung in 2 Punkt Perspektive
+                                </p>
+                                <br/>
+                            </div><!---->
+                            <div id="end-popup-outer"> <!-- Start PopUp Meine Posts/Nächste Lektion -->
+                                <div id="end-popup-inner">
+                                    <p id="popUpTxt">Gut gemacht! Teile noch heute deine Zeichnung mit der Community. Feedback ist wichtig für deinen Lernerfolg. Trau dich!</p>
+                                    <div id="buttonContainerLectureEnd">
+                                        <input type="button" class="btn" id="toMyPosts" value="Zu meinen Posts" onclick="window.location.href = '../html/community-mydrawings.html';"/>
+                                        <input type="button" class="btn" id="nextLecture" value="Zur nächsten Lektion"/>
+                                    </div>
+                                </div>
+                            </div> <!-- Ende PopUp Meine Posts/Nächste Lektion -->
+                            <div class="lection-end"><!-- Button zum Öffnen des Pops -->
+                                <input type="button" class="btn" id="nextLecturePopUp" value="Zur nächsten Lektion" />
+                            </div><!---->
+                        </div>
+                </div>
+            </main>
+            <footer class="lecture-footer"></footer>
+        </div>
+        <!-- Overlay Sound Popup -->
+        <div class="popup-outer-wrapper" style="display:none">
+            <div class="popup-inner-wrapper profile">
+                <div class="popup-close" onclick="closePopup()">
+                    <img src="../assets/icons/icon-cancel-colored.svg" alt="&times;" />
+                </div>
+                <div class="popup-main">
+                    <h1 class="popup-header profile">MEIN PROFIL</h1>
+                    <div class="main-content">
+                        <div class="popup-item popup-dummy">
+                            <div class="avatar">
+                                <img src="../assets/pictures/dummy-avatar.jpg" alt="Avatar" />
+                            </div>
+                            <div class="exp-progress ">
+                                <span class="exp-txt">
+                                    LVL X
+                                </span>
+                                <div class="exp-bar">
+                                    <ins style="width:75%"></ins>
+                                </div>
+                                <span class="cur-exp">X / 2000 </span> XP
+                            </div>
+                            <div class="userinfo">
+                                <div class="userinfo-item">
+                                    <span class="user user-name">
+                                        Name
+                                    </span>
+                                    <span class="user user-name-info">
+                                        Daniel Müller
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-id">
+                                        ID
+                                    </span>
+                                    <span class="user user-id-info">
+                                        MuellerStudent98
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-age">
+                                        Alter
+                                    </span>
+                                    <span class="user user-age-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupation">
+                                        Tätigkeit
+                                    </span>
+                                    <span class="user user-occupation-info">
+                                        -
+                                    </span>
+                                </div>
+                                <div class="userinfo-item">
+                                    <span class="user user-occupationAct">
+                                        Fachrichtung
+                                    </span>
+                                    <span class="user user-occupationAct-info">
+                                        -
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup-item form-container">
+                            <form>
+                                <div>
+                                    <input type="button" class="btn" onclick="closePopup();location.href='community-mydrawings.html'" value="Meine Posts" id="btnPosts">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="alert('Derzeit keine Benachrichtigungen')" value="Benachrichtigungen (0)" id="btnNotification">
+                                </div>
+                                <div>
+                                    <input type="button" class="btn" onclick="soundSwitch();checkAudio();" id="btnsettings">
+                                </div>
+                                <div class="not-sign">
+                                    Nicht dein Account?
+                                    <span class="link-text" onclick="closePopup();location.href='../index.html'">Logout</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <script type="module" src="../scripts/loggedin.js"></script>
+            </div>
+        </div>
+    </body>
+</html>

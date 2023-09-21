@@ -1,0 +1,26 @@
+/*--------------
+DM6 SS 2022
+CSS STYLESHEET
+
+COPYRIGHT© TEAM3
+
+FELIX DEDEK
+RICHARD DUCHAN 
+MARC FISCHER
+ISABELLE KOPPENHÖFER
+KASIMIR POLIVKA
+
+INFO CSS FILE 
+---------------*/
+
+.about {
+    display: flex;
+    flex-direction: column;
+ }
+
+.about .btn{
+    width: 180px;
+    max-width: 100%;
+    padding-top: 0.75rem; padding-bottom: 0.75rem;
+}
+
